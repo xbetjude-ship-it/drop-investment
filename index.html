@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#052c1b">
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root{--bg:#04180f;--panel:#09291b;--green:#32e875;--gold:#ffd83d;--text:#f5fff8;--muted:#b8d0c1;--line:#2a5d40;--red:#ff7777}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(ellipse at top,#0a4828 0,var(--bg) 62%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
@@ -43,7 +45,6 @@ a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
 footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);font-size:.86rem}
 @media(max-width:780px){.navlinks a:not(.btn){display:none}.hero,.auth-area,.payment-box{grid-template-columns:1fr}.plans,.feature-grid,.stats{grid-template-columns:1fr}.hero{padding:35px 0}.hero-card{margin-top:5px}}
 /* DROP INVESTMENT — design premium */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#07110f;--panel:#101d19;--green:#32d6a0;--gold:#d7b66d;--text:#f4f7f5;--muted:#a5b5ae;--line:#2a4037;--red:#ff7777;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
 body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
@@ -74,6 +75,13 @@ footer{border-top:1px solid #ffffff16;padding:25px 0 38px;color:var(--muted);fon
 @media(max-width:850px){.navlinks{gap:13px}.hero{gap:26px}.plans,.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.plans .card:last-child{grid-column:1/-1}.auth-area{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:min(100% - 30px,1160px)}.nav{padding:16px 0}.navlinks a:not(.btn){display:none}.navlinks .btn{padding:10px 12px;font-size:.82rem;min-height:40px}.hero{grid-template-columns:1fr;padding:43px 0 38px;gap:24px}.hero h1{font-size:clamp(2.5rem,12vw,3.7rem)}.hero p{font-size:.97rem}.hero-card{padding:23px}.notice{padding:14px;font-size:.84rem}.section{padding:38px 0}.plans,.feature-grid,.stats,.payment-box{grid-template-columns:1fr}.plans .card:last-child{grid-column:auto}.card{padding:22px}.stats{gap:10px}.stat{padding:16px}.form-card{padding:19px}.btn{min-height:45px}.table-wrap{margin-inline:-1px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+/* Finitions typographiques et accessibilité */
+::selection{background:#32d6a055;color:#fff}
+button,input,textarea,select{font-family:'DM Sans',system-ui,sans-serif}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:380px){.wrap{width:calc(100% - 24px)}.logo{font-size:.94rem}.navlinks .btn{font-size:.76rem;padding:9px 10px}.hero h1{font-size:2.35rem}}
 
 </style>
 </head>
