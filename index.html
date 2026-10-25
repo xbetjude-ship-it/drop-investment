@@ -7,82 +7,96 @@
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-
-:root{--bg:#04180f;--panel:#09291b;--green:#32e875;--gold:#ffd83d;--text:#f5fff8;--muted:#b8d0c1;--line:#2a5d40;--red:#ff7777}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at top,#0a4828 0,var(--bg) 62%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
-a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:19px 0;gap:15px}
-.logo{font-weight:950;font-size:1.22rem;letter-spacing:.04em;text-decoration:none}.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}
-.btn{border:0;border-radius:11px;padding:12px 17px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:8px}
-.btn:disabled{opacity:.55;cursor:not-allowed}.gold{background:var(--gold);color:#14210f}.outline{background:transparent;color:var(--text);border:1px solid var(--line)}.green{background:var(--green);color:#062014}.red{background:#542323;color:#fff}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;padding:58px 0 50px}
-.kicker{font-size:.77rem;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:900}
-.hero h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:.98;letter-spacing:-.05em;margin:14px 0}.hero h1 span{color:var(--gold)}
-.hero p{font-size:1.08rem;color:var(--muted);max-width:590px}
-.hero-card{padding:25px;border-radius:24px;background:linear-gradient(145deg,#0d452a,#061c12);border:1px solid #32e87577;box-shadow:0 18px 55px #0005}
-.hero-card .big{font-size:2.6rem;font-weight:950;color:var(--gold)}
-.pill{display:inline-block;border:1px solid #ffd83d66;border-radius:999px;padding:5px 10px;color:#ffeb9c;font-size:.78rem}
-.notice{border:1px solid #ffd83d77;background:#332b0c88;color:#ffefb3;border-radius:14px;padding:15px 17px;margin:10px auto 25px;font-size:.91rem}
-.section{padding:42px 0}.section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px}.sub{color:var(--muted);max-width:750px;margin:0 0 25px}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(150deg,#0c3321,#061d13);border:1px solid var(--line);border-radius:18px;padding:23px}
-.card:nth-child(2){border-color:#1498e8}.card:nth-child(3){border-color:#be54e9}
-.label{font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.price{font-size:2rem;font-weight:950;color:var(--gold);margin:9px 0}
-.card p,.feature p{color:var(--muted);font-size:.94rem}.card .btn{width:100%;margin-top:8px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:20px;border:1px solid #ffffff1c;border-radius:15px;background:#ffffff08}.feature h3{margin:8px 0}.icon{font-size:1.5rem}
-.auth-area{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.form-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}.form-card h3{margin-top:0}
-.field{margin:13px 0}.field label{display:block;font-weight:700;margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #3b6a4d;background:#03170e;color:var(--text);font:inherit}
-.field textarea{min-height:85px;resize:vertical}.muted{color:var(--muted)}.small{font-size:.82rem;color:var(--muted)}
-.status{padding:10px;border-radius:10px;background:#03170e;border:1px solid var(--line);overflow-wrap:anywhere}
-.hidden{display:none!important}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
-.stat{padding:20px;border:1px solid var(--line);border-radius:15px;background:#ffffff08}.stat .num{font-size:1.5rem;font-weight:900;color:var(--gold)}
-.payment-box{display:grid;grid-template-columns:1fr 1fr;gap:18px}.notice-blue{background:#092c42;border:1px solid #1498e866;padding:15px;border-radius:12px;color:#d5f0ff}
-.addr{font-family:ui-monospace,monospace;overflow-wrap:anywhere;background:#03170e;border:1px solid var(--line);border-radius:10px;padding:12px}
-.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:10px;border-bottom:1px solid #ffffff1c;vertical-align:top}th{color:var(--gold)}
-.faq details{border-bottom:1px solid #ffffff22;padding:15px 0}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted)}
-footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);font-size:.86rem}
-@media(max-width:780px){.navlinks a:not(.btn){display:none}.hero,.auth-area,.payment-box{grid-template-columns:1fr}.plans,.feature-grid,.stats{grid-template-columns:1fr}.hero{padding:35px 0}.hero-card{margin-top:5px}}
-/* DROP INVESTMENT — design premium */
 :root{--bg:#07110f;--panel:#101d19;--green:#32d6a0;--gold:#d7b66d;--text:#f4f7f5;--muted:#a5b5ae;--line:#2a4037;--red:#ff7777;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
 body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.logo,.price,.stat .num{font-family:'Manrope','DM Sans',sans-serif;letter-spacing:-.035em}
-a{color:inherit}.wrap{width:min(1160px,91%);margin-inline:auto}
+a{color:inherit}
+.wrap{width:min(1160px,91%);margin-inline:auto}
 .nav{position:relative;display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:20px;border-bottom:1px solid #ffffff12}
-.logo{font-size:1.08rem;font-weight:800;letter-spacing:.055em;text-decoration:none}.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;transition:color .2s}.navlinks a:hover{color:var(--text)}
+.logo{font-size:1.08rem;font-weight:800;letter-spacing:.055em;text-decoration:none}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem;transition:color .2s}
+.navlinks a:hover{color:var(--text)}
 .btn{border:1px solid transparent;border-radius:10px;padding:12px 18px;font:600 .92rem 'DM Sans',sans-serif;cursor:pointer;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:46px;transition:transform .18s,border-color .18s,background .18s;letter-spacing:0}
-.btn:hover{transform:translateY(-1px)}.btn:focus-visible,.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--green);outline-offset:3px}.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
-.gold{background:var(--gold);color:#15170f}.gold:hover{background:#e5c77f}.outline{background:#ffffff04;color:var(--text);border-color:#ffffff26}.outline:hover{border-color:var(--gold);background:#ffffff08}.green{background:var(--green);color:#06241a}.green:hover{background:#61e4ba}.red{background:#542323;color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.gold{background:var(--gold);color:#15170f}
+.gold:hover{background:#e5c77f}
+.outline{background:#ffffff04;color:var(--text);border-color:#ffffff26}
+.outline:hover{border-color:var(--gold);background:#ffffff08}
+.green{background:var(--green);color:#06241a}
+.green:hover{background:#61e4ba}
+.red{background:#542323;color:#fff}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,70px);align-items:center;padding:clamp(55px,8vw,100px) 0 68px}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.73rem;text-transform:uppercase;letter-spacing:.16em;color:var(--green);font-weight:700}.kicker:before{content:'';width:23px;height:1px;background:var(--green)}
-.hero h1{font-size:clamp(2.6rem,5.8vw,5.2rem);line-height:1.03;letter-spacing:-.065em;margin:18px 0 22px;font-weight:800}.hero h1 span{display:inline-block;color:var(--gold)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.73rem;text-transform:uppercase;letter-spacing:.16em;color:var(--green);font-weight:700}
+.kicker:before{content:'';width:23px;height:1px;background:var(--green)}
+.hero h1{font-size:clamp(2.6rem,5.8vw,5.2rem);line-height:1.03;letter-spacing:-.065em;margin:18px 0 22px;font-weight:800}
+.hero h1 span{display:inline-block;color:var(--gold)}
 .hero p{font-size:1.04rem;color:var(--muted);max-width:570px;line-height:1.8}
-.hero-card{position:relative;overflow:hidden;padding:clamp(24px,4vw,38px);border-radius:20px;background:linear-gradient(145deg,#142920,#0d1915 72%);border:1px solid #ffffff19;box-shadow:0 24px 70px #0004}.hero-card:after{content:'';position:absolute;width:210px;height:210px;border-radius:50%;right:-95px;top:-110px;border:1px solid #d7b66d38;box-shadow:0 0 0 24px #d7b66d08,0 0 0 48px #d7b66d06;pointer-events:none}.hero-card .big{font-size:clamp(2.8rem,5vw,4rem);line-height:1.1;font-weight:800;letter-spacing:-.08em;color:var(--gold);margin-top:24px}.hero-card h2{font-size:1.35rem;margin:10px 0}.hero-card p{font-size:.93rem;line-height:1.75}.pill{display:inline-flex;align-items:center;border:1px solid #d7b66d55;border-radius:999px;padding:5px 11px;color:#e7d4a8;font-size:.73rem;font-weight:600;letter-spacing:.035em;margin:3px 5px 3px 0}
+.hero-card{position:relative;overflow:hidden;padding:clamp(24px,4vw,38px);border-radius:20px;background:linear-gradient(145deg,#142920,#0d1915 72%);border:1px solid #ffffff19;box-shadow:0 24px 70px #0004}
+.hero-card:after{content:'';position:absolute;width:210px;height:210px;border-radius:50%;right:-95px;top:-110px;border:1px solid #d7b66d38;box-shadow:0 0 0 24px #d7b66d08,0 0 0 48px #d7b66d06;pointer-events:none}
+.hero-card .big{font-size:clamp(2.8rem,5vw,4rem);line-height:1.1;font-weight:800;letter-spacing:-.08em;color:var(--gold);margin-top:24px}
+.hero-card h2{font-size:1.35rem;margin:10px 0}
+.hero-card p{font-size:.93rem;line-height:1.75}
+.pill{display:inline-flex;align-items:center;border:1px solid #d7b66d55;border-radius:999px;padding:5px 11px;color:#e7d4a8;font-size:.73rem;font-weight:600;letter-spacing:.035em;margin:3px 5px 3px 0}
 .notice{border:1px solid #d7b66d4d;background:linear-gradient(110deg,#2a2417,#171b15);color:#e8dcc1;border-radius:12px;padding:16px 19px;margin:0 auto 28px;font-size:.89rem;line-height:1.75}
-.section{padding:clamp(38px,6vw,72px) 0}.section h2{font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-.055em;margin:0 0 9px;font-weight:800}.sub{color:var(--muted);max-width:760px;margin:0 0 28px;line-height:1.8}
-.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:linear-gradient(150deg,#14231d,#0d1915);border:1px solid #ffffff18;border-radius:16px;padding:clamp(21px,3vw,30px);transition:transform .2s,border-color .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);border-color:#d7b66d70;box-shadow:0 18px 40px #0002}.card:nth-child(2),.card:nth-child(3){border-color:#ffffff18}
-.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:700}.card h3{font-size:1.35rem;margin:12px 0 6px}.price{font-size:clamp(1.65rem,2.7vw,2.1rem);font-weight:800;color:var(--gold);margin:12px 0}.card p,.feature p{color:var(--muted);font-size:.92rem;line-height:1.75}.card .btn{width:100%;margin-top:13px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.feature{padding:23px;border:1px solid #ffffff17;border-radius:14px;background:linear-gradient(145deg,#111f19,#0d1814);min-width:0}.feature h3{margin:10px 0 5px;font-size:1.08rem}.icon{font-size:1.45rem;color:var(--gold)}
-.auth-area{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px}.form-card{background:linear-gradient(145deg,#13231c,#0d1915);border:1px solid #ffffff1a;border-radius:16px;padding:clamp(20px,3vw,30px);min-width:0;box-shadow:0 14px 40px #0002}.form-card h3{margin-top:0;font-size:1.25rem}.field{margin:15px 0}.field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px;color:#e4ebe7}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border-radius:9px;border:1px solid #ffffff24;background:#08120f;color:var(--text);font:inherit;font-size:.93rem;transition:border-color .2s,box-shadow .2s}.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#32d6a0a8;box-shadow:0 0 0 3px #32d6a015}.field input::placeholder,.field textarea::placeholder{color:#71847a}.field textarea{min-height:90px;resize:vertical}.muted{color:var(--muted)}.small{font-size:.82rem;color:var(--muted);line-height:1.65}.status{padding:12px 14px;border-radius:9px;background:#09140f;border:1px solid #ffffff19;overflow-wrap:anywhere}
-.hidden{display:none!important}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0}.stat{padding:20px;border:1px solid #ffffff1a;border-radius:13px;background:linear-gradient(145deg,#14251e,#0e1a15);min-width:0}.stat .num{font-size:clamp(1.1rem,2vw,1.55rem);font-weight:800;color:var(--gold);overflow-wrap:anywhere;margin:6px 0}
-.payment-box{display:grid;grid-template-columns:1fr 1fr;gap:16px}.notice-blue{background:#101f25;border:1px solid #6aa4b333;padding:15px;border-radius:10px;color:#c9dfe4;font-size:.9rem;line-height:1.7}.addr{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;overflow-wrap:anywhere;background:#08120f;border:1px solid #ffffff1c;border-radius:9px;padding:13px;color:#d5e8df}
-.table-wrap{overflow-x:auto;border:1px solid #ffffff17;border-radius:10px}table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:560px}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #ffffff12;vertical-align:top}th{color:var(--gold);font-weight:700;font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;background:#ffffff04}tbody tr:hover{background:#ffffff04}tbody tr:last-child td{border-bottom:0}
-.faq details{border-bottom:1px solid #ffffff18;padding:17px 0}.faq summary{cursor:pointer;font-weight:600;list-style-position:outside}.faq summary::marker{color:var(--gold)}.faq p{color:var(--muted);line-height:1.8;font-size:.94rem}
+.section{padding:clamp(38px,6vw,72px) 0}
+.section h2{font-size:clamp(1.8rem,3.5vw,2.6rem);letter-spacing:-.055em;margin:0 0 9px;font-weight:800}
+.sub{color:var(--muted);max-width:760px;margin:0 0 28px;line-height:1.8}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:linear-gradient(150deg,#14231d,#0d1915);border:1px solid #ffffff18;border-radius:16px;padding:clamp(21px,3vw,30px);transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);border-color:#d7b66d70;box-shadow:0 18px 40px #0002}
+.card:nth-child(2),.card:nth-child(3){border-color:#ffffff18}
+.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:700}
+.card h3{font-size:1.35rem;margin:12px 0 6px}
+.tariff-logo{display:inline-flex;align-items:center;justify-content:center;width:1.45em;height:1.45em;border-radius:50%;background:linear-gradient(135deg,#f5d98b,#b98c32);color:#14251d;font-size:.72em;font-weight:900;vertical-align:middle;margin-right:.2em;box-shadow:0 0 0 3px #d7b66d20}.price{font-size:clamp(1.65rem,2.7vw,2.1rem);font-weight:800;color:var(--gold);margin:12px 0}
+.card p,.feature p{color:var(--muted);font-size:.92rem;line-height:1.75}
+.card .btn{width:100%;margin-top:13px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feature{padding:23px;border:1px solid #ffffff17;border-radius:14px;background:linear-gradient(145deg,#111f19,#0d1814);min-width:0}
+.feature h3{margin:10px 0 5px;font-size:1.08rem}
+.icon{font-size:1.45rem;color:var(--gold)}
+.auth-area{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px}
+.form-card{background:linear-gradient(145deg,#13231c,#0d1915);border:1px solid #ffffff1a;border-radius:16px;padding:clamp(20px,3vw,30px);min-width:0;box-shadow:0 14px 40px #0002}
+.form-card h3{margin-top:0;font-size:1.25rem}
+.field{margin:15px 0}
+.field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px;color:#e4ebe7}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border-radius:9px;border:1px solid #ffffff24;background:#08120f;color:var(--text);font:inherit;font-size:.93rem;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#32d6a0a8;box-shadow:0 0 0 3px #32d6a015}
+.field input::placeholder,.field textarea::placeholder{color:#71847a}
+.field textarea{min-height:90px;resize:vertical}
+.muted{color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted);line-height:1.65}
+.status{padding:12px 14px;border-radius:9px;background:#09140f;border:1px solid #ffffff19;overflow-wrap:anywhere}
+.hidden{display:none!important}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0}
+.stat{padding:20px;border:1px solid #ffffff1a;border-radius:13px;background:linear-gradient(145deg,#14251e,#0e1a15);min-width:0}
+.stat .num{font-size:clamp(1.1rem,2vw,1.55rem);font-weight:800;color:var(--gold);overflow-wrap:anywhere;margin:6px 0}
+.payment-box{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.notice-blue{background:#101f25;border:1px solid #6aa4b333;padding:15px;border-radius:10px;color:#c9dfe4;font-size:.9rem;line-height:1.7}
+.addr{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;overflow-wrap:anywhere;background:#08120f;border:1px solid #ffffff1c;border-radius:9px;padding:13px;color:#d5e8df}
+.table-wrap{overflow-x:auto;border:1px solid #ffffff17;border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:560px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #ffffff12;vertical-align:top}
+th{color:var(--gold);font-weight:700;font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;background:#ffffff04}
+tbody tr:hover{background:#ffffff04}
+tbody tr:last-child td{border-bottom:0}
+.faq details{border-bottom:1px solid #ffffff18;padding:17px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style-position:outside}
+.faq summary::marker{color:var(--gold)}
+.faq p{color:var(--muted);line-height:1.8;font-size:.94rem}
 footer{border-top:1px solid #ffffff16;padding:25px 0 38px;color:var(--muted);font-size:.83rem}
 @media(max-width:850px){.navlinks{gap:13px}.hero{gap:26px}.plans,.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.plans .card:last-child{grid-column:1/-1}.auth-area{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:min(100% - 30px,1160px)}.nav{padding:16px 0}.navlinks a:not(.btn){display:none}.navlinks .btn{padding:10px 12px;font-size:.82rem;min-height:40px}.hero{grid-template-columns:1fr;padding:43px 0 38px;gap:24px}.hero h1{font-size:clamp(2.5rem,12vw,3.7rem)}.hero p{font-size:.97rem}.hero-card{padding:23px}.notice{padding:14px;font-size:.84rem}.section{padding:38px 0}.plans,.feature-grid,.stats,.payment-box{grid-template-columns:1fr}.plans .card:last-child{grid-column:auto}.card{padding:22px}.stats{gap:10px}.stat{padding:16px}.form-card{padding:19px}.btn{min-height:45px}.table-wrap{margin-inline:-1px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
-
-
-/* Finitions typographiques et accessibilité */
 ::selection{background:#32d6a055;color:#fff}
 button,input,textarea,select{font-family:'DM Sans',system-ui,sans-serif}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 @media(max-width:380px){.wrap{width:calc(100% - 24px)}.logo{font-size:.94rem}.navlinks .btn{font-size:.76rem;padding:9px 10px}.hero h1{font-size:2.35rem}}
-
 </style>
 </head>
 <body>
@@ -90,32 +104,30 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <a class="logo" href="#" style="text-decoration:none">DROP <span>INVESTMENT</span></a>
 <nav class="navlinks"><a href="#plans">Formules</a><a href="#fonctionnement">Fonctionnement</a><a href="#faq">FAQ</a><a class="btn outline" href="#espace">Espace membre</a></nav>
 </header>
-
 <main id="public">
 <section class="wrap hero">
 <div><div class="kicker">Espace membre et suivi des opérations</div><h1>Bienvenue chez<br><span>DROP INVESTMENT</span></h1>
 <p>Connectez-vous pour consulter vos demandes de dépôt, votre solde comptabilisé et vos demandes de retrait.</p>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px"><a class="btn gold" href="#plans">Découvrir les formules</a><a class="btn outline" href="#espace">Accéder à mon espace</a></div></div>
-<div class="hero-card"><span class="pill">ESPACE MEMBRE</span><div class="big">DROP</div><h2>Suivi des opérations</h2><p>Les soldes ne sont mis à jour qu’après confirmation côté serveur. Les demandes de retrait sont validées manuellement par l’administrateur.</p><span class="pill">Bitcoin · BTC</span><span class="pill">Supabase Auth</span></div>
+<div class="hero-card"><span class="pill">ESPACE MEMBRE</span><div class="big">DROP</div><h2>Suivi des opérations</h2><p>Un espace clair pour consulter vos opérations et vos demandes de retrait.</p><span class="pill">Paiement Bitcoin</span><span class="pill">Espace personnel</span></div>
 </section>
-
-<div class="wrap notice"><strong>Important :</strong> n’envoyez des BTC qu’après avoir vérifié l’adresse et le réseau. Une transaction Bitcoin confirmée est généralement irréversible. Aucun rendement n’est garanti. Cette interface nécessite les fonctions serveur et les règles de base de données indiquées dans le code pour gérer de vrais fonds.</div>
-
+<div class="wrap notice"><strong>Avant tout dépôt :</strong> vérifiez soigneusement l’adresse Bitcoin et le réseau. Une transaction confirmée est généralement irréversible. Les taux affichés sont des taux annoncés et ne constituent pas une garantie de rendement. Tout investissement comporte un risque de perte.</div>
 <section class="wrap section" id="plans">
-<h2>Formules</h2><p class="sub">Les montants affichés sont des montants de référence, pas une promesse de rendement.</p>
+<h2>Nos formules de dépôt</h2><p class="sub">Les taux ci-dessous sont annoncés pour une période de cinq jours. Ils ne constituent pas une garantie de gains. Informez-vous sur les conditions et les risques avant tout dépôt.</p>
 <div class="plans">
-<article class="card"><div class="label">Formule 01</div><h3>Essentiel</h3><div class="price">10 000 FCFA</div><p>Consultez les conditions, les frais et les risques avant tout paiement.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
-<article class="card"><div class="label">Formule 02</div><h3>Plus</h3><div class="price">15 000 FCFA</div><p>Aucun gain automatique n’est crédité par cette page.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
-<article class="card"><div class="label">Formule 03</div><h3>Premium</h3><div class="price">20 000 FCFA</div><p>Les dépôts et retraits sont soumis aux contrôles côté serveur.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 01</div><h3>DROP STARTER</h3><div class="price"><span class="tariff-logo" aria-label="Bitcoin">₿</span> 10 000 FCFA</div><p><strong>5 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 02</div><h3>DROP SILVER</h3><div class="price"><span class="tariff-logo" aria-label="Bitcoin">₿</span> 15 000 FCFA</div><p><strong>10 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 03</div><h3>DROP GOLD</h3><div class="price"><span class="tariff-logo" aria-label="Bitcoin">₿</span> 20 000 FCFA</div><p><strong>15 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 04</div><h3>DROP PLATINUM</h3><div class="price"><span class="tariff-logo" aria-label="Bitcoin">₿</span> 25 000 FCFA</div><p><strong>20 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 05</div><h3>DROP ELITE</h3><div class="price"><span class="tariff-logo" aria-label="Bitcoin">₿</span> 30 000 FCFA</div><p><strong>25 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Montant personnalisé</div><h3>Votre choix</h3><div class="price">Dès 10 000 FCFA</div><p>Montant personnalisé à partir de 10 000 FCFA, selon les conditions applicables.</p><a class="btn gold" href="#espace">Commencer</a></article>
 </div></section>
-
-<section class="wrap section" id="fonctionnement"><h2>Fonctionnement</h2><p class="sub">Les actions financières sont enregistrées dans la base de données et contrôlées côté serveur.</p>
-<div class="feature-grid"><div class="feature"><div class="icon">₿</div><h3>Dépôts Bitcoin</h3><p>Une demande de dépôt reste en attente jusqu’à la vérification de la transaction sur la blockchain.</p></div>
-<div class="feature"><div class="icon">↗</div><h3>Retraits manuels</h3><p>Chaque demande est examinée par l’administrateur avant l’envoi des fonds.</p></div>
-<div class="feature"><div class="icon">🔐</div><h3>Protection du compte</h3><p>Le navigateur ne décide jamais du solde : la base de données et les fonctions serveur doivent faire les contrôles.</p></div></div>
+<section class="wrap section" id="fonctionnement"><h2>Fonctionnement</h2><p class="sub">Un parcours simple pour déposer, suivre vos opérations et demander un retrait.</p>
+<div class="feature-grid"><div class="feature"><div class="icon">₿</div><h3>Paiement Bitcoin</h3><p>Copiez l’adresse BTC affichée dans votre espace membre, vérifiez-la puis envoyez le montant choisi.</p></div>
+<div class="feature"><div class="icon">↗</div><h3>Suivi des retraits</h3><p>Chaque demande est examinée par l’administration. L’approbation seule ne confirme pas qu’un paiement a été envoyé.</p></div>
+<div class="feature"><div class="icon">◷</div><h3>Suivi des opérations</h3><p>Consultez le solde disponible et l’historique depuis votre espace membre.</p></div></div>
 </section>
-
-<section class="wrap section" id="espace"><h2>Espace membre</h2><p class="sub">Inscription et connexion par e-mail. Utilisez un mot de passe unique.</p>
+<section class="wrap section" id="espace"><h2>Espace membre</h2><p class="sub">Connectez-vous ou créez votre espace personnel pour suivre vos opérations.</p>
 <div id="auth" class="auth-area">
 <form class="form-card" id="authForm"><h3 id="authTitle">Connexion membre</h3>
 <div class="field"><label for="memberName">Nom ou pseudo <span id="nameHint" class="small">(facultatif pour la connexion)</span></label><input id="memberName" autocomplete="nickname" placeholder="Votre pseudo"></div>
@@ -123,9 +135,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <div class="field"><label for="memberPassword">Mot de passe</label><input id="memberPassword" type="password" minlength="8" autocomplete="current-password" required placeholder="8 caractères minimum"></div>
 <button class="btn gold" id="submitAuth" type="submit" style="width:100%">Se connecter</button><button class="btn green" id="toggleMode" type="button" style="width:100%;margin-top:10px">Créer un compte</button><button class="btn outline" id="forgotPassword" type="button" style="width:100%;margin-top:10px">Mot de passe oublié</button>
 <p id="authMessage" class="small status" role="status" aria-live="polite">La confirmation par e-mail peut être demandée.</p></form>
-<div class="form-card"><h3>Avant de commencer</h3><ul class="muted"><li>Confirmez votre adresse e-mail si demandé.</li><li>Les dépôts attendent une confirmation de transaction.</li><li>Les retraits sont soumis à validation manuelle.</li><li>Ne partagez jamais votre mot de passe.</li></ul><div class="notice-blue">L’interface financière appelle des fonctions Supabase sécurisées. Si elles ne sont pas installées, les demandes sont bloquées et aucun solde fictif n’est affiché.</div></div>
+<div class="form-card"><h3>Comment ça marche ?</h3><ul class="muted"><li>Créez votre compte ou connectez-vous.</li><li>Choisissez votre montant de dépôt.</li><li>Vérifiez l’adresse Bitcoin avant l’envoi.</li><li>Consultez l’historique pour suivre vos opérations.</li></ul><div class="notice-blue">Un dépôt est pris en compte après vérification de la transaction. Le TXID saisi seul ne suffit pas à confirmer un paiement.</div></div>
 </div>
-
 <div id="dashboard" class="hidden">
 <div class="form-card">
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><span class="pill">ESPACE MEMBRE</span><h3 id="welcome">Bienvenue</h3><p class="small" id="memberEmailDisplay"></p></div><button class="btn outline" id="logout" type="button">Se déconnecter</button></div>
@@ -142,8 +153,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <div class="field"><label for="depositTx">Identifiant de transaction (TXID), si disponible</label><input id="depositTx" maxlength="120" placeholder="TXID de la transaction"></div>
 <p class="small">Le TXID fourni par l’utilisateur ne suffit pas à valider le dépôt. La confirmation doit être vérifiée côté serveur.</p>
 <button type="button" class="btn green" id="requestDeposit" style="width:100%">Soumettre la demande de dépôt</button></div>
-
-<div class="feature"><h3>Demander un retrait</h3><p>Les demandes sont examinées manuellement. Ne demande pas plus que ton solde disponible.</p>
+<div class="feature"><h3>Demander un retrait</h3><p>Votre demande est examinée par l’administration. Ne demandez pas plus que votre solde disponible. L’approbation ne prouve pas qu’un versement a été envoyé.</p>
 <div class="field"><label for="withdrawAmount">Montant à retirer (FCFA)</label><input id="withdrawAmount" type="number" min="1" step="1" placeholder="Montant en FCFA"></div>
 <div class="field"><label for="withdrawAddress">Adresse Bitcoin de destination</label><input id="withdrawAddress" maxlength="120" placeholder="Adresse BTC à vérifier"></div>
 <div class="field"><label for="withdrawNote">Note (facultatif)</label><textarea id="withdrawNote" maxlength="300" placeholder="Informations complémentaires"></textarea></div>
@@ -153,15 +163,13 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <div id="adminPanel" class="feature hidden" style="margin-top:18px"><h3>Administration des retraits</h3><p>Réservé aux comptes explicitement autorisés côté serveur. L’approbation ne signifie pas que le paiement a été envoyé.</p><button type="button" class="btn outline" id="loadAdmin">Charger les demandes en attente</button><div class="table-wrap"><table><thead><tr><th>Date</th><th>Membre</th><th>Montant</th><th>Adresse BTC</th><th>Action</th></tr></thead><tbody id="adminRows"><tr><td colspan="5">Aucune demande chargée.</td></tr></tbody></table></div></div>
 </div>
 </section>
-
 <section class="wrap section faq" id="faq"><h2>Questions fréquentes</h2>
 <details><summary>Le dépôt est-il crédité dès que j’envoie des BTC ?</summary><p>Non. Le dépôt reste en attente jusqu’à vérification indépendante de la transaction et du nombre de confirmations requis.</p></details>
-<details><summary>Comment les retraits sont-ils traités ?</summary><p>Les demandes sont examinées par l’administrateur. Une demande ne doit être marquée comme payée qu’après l’envoi et la vérification de la transaction.</p></details>
-<details><summary>Pourquoi certaines fonctions peuvent-elles être indisponibles ?</summary><p>Les fonctions financières nécessitent les procédures RPC, les tables, les politiques RLS et les contrôles côté serveur. Sans ces éléments, le site refuse de créer des opérations financières.</p></details>
+<details><summary>Comment les retraits sont-ils traités ?</summary><p>Chaque retrait est examiné par l’administration. L’approbation seule ne signifie pas que les fonds ont été envoyés ; vérifiez le statut de paiement dans votre espace membre.</p></details>
+<details><summary>Quand mon dépôt est-il pris en compte ?</summary><p>Après vérification indépendante de la transaction Bitcoin et du nombre de confirmations requis. Le TXID saisi dans le formulaire ne suffit pas à lui seul.</p></details>
 </section>
 </main>
-<footer><div class="wrap">© <span id="year"></span> DROP INVESTMENT · Vérifiez les risques et les conditions avant toute transaction.</div></footer>
-
+<footer><div class="wrap">© <span id="year"></span> DROP INVESTMENT</div></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (() => {
@@ -171,7 +179,6 @@ const SUPABASE_PUBLISHABLE_KEY='sb_publishable_npazKAHEgFhOWjr4jPwbbA_x7w_dDpv';
 const BTC_ADDRESS='bc1q4caj4vwxz4ekj8832w9wd6n3ylhxmzagx74u8n';
 const $=id=>document.getElementById(id);
 let mode='login',busy=false,client=null,currentUser=null;
-
 function say(t){$('authMessage').textContent=t}
 function walletSay(t){$('walletMessage').textContent=t}
 function setBusy(v){busy=v;$('submitAuth').disabled=v;$('toggleMode').disabled=v;$('forgotPassword').disabled=v;$('submitAuth').textContent=v?'Veuillez patienter…':(mode==='login'?'Se connecter':'Créer mon compte')}
@@ -179,104 +186,57 @@ function setMode(next){mode=next;$('authTitle').textContent=mode==='login'?'Conn
 function money(n){const value=Number(n);return Number.isFinite(value)?new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(value)+' FCFA':'Indisponible'}
 function showDashboard(user){currentUser=user;$('auth').classList.add('hidden');$('dashboard').classList.remove('hidden');$('welcome').textContent='Bienvenue, '+(user.user_metadata?.username||user.email||'membre');$('memberEmailDisplay').textContent=user.email||'';loadWallet()}
 function showAuth(){$('dashboard').classList.add('hidden');$('auth').classList.remove('hidden');$('adminPanel').classList.add('hidden');currentUser=null}
-function friendlyError(error){const m=String(error?.message||'');if(/Invalid login credentials/i.test(m))return'E-mail ou mot de passe incorrect.';if(/Email not confirmed/i.test(m))return'Confirmez votre adresse e-mail depuis le message reçu.';if(/User already registered/i.test(m))return'Un compte existe déjà avec cette adresse. Essayez de vous connecter.';if(/Password should be at least/i.test(m))return'Choisissez un mot de passe d’au moins 8 caractères.';return m||'Opération impossible. Vérifiez la connexion et la configuration Supabase.'}
-async function rpc(name,args={}){if(!client)throw new Error('Supabase n’est pas initialisé.');const {data,error}=await client.rpc(name,args);if(error)throw error;return data}
+function friendlyError(error){const m=String(error?.message||'');if(/Invalid login credentials/i.test(m))return'E-mail ou mot de passe incorrect.';if(/Email not confirmed/i.test(m))return'Confirmez votre adresse e-mail depuis le message reçu.';if(/User already registered/i.test(m))return'Un compte existe déjà avec cette adresse. Essayez de vous connecter.';if(/Password should be at least/i.test(m))return'Choisissez un mot de passe d’au moins 8 caractères.';if(/get_my_wallet|RPC|function .* does not exist|schema cache|permission denied|admin_list_pending/i.test(m))return'Cette opération est momentanément indisponible. Réessayez plus tard ou contactez l’administration.';return m||'Opération impossible. Vérifiez votre connexion et réessayez.'}
+async function rpc(name,args={}){if(!client)throw new Error('Service momentanément indisponible.');const {data,error}=await client.rpc(name,args);if(error)throw error;return data}
 function formatDate(v){if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':d.toLocaleString('fr-FR')}
 function safeText(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-
 async function loadWallet(){
-walletSay('Chargement du solde et de l’historique…');
-$('balance').textContent='—';$('totalDeposits').textContent='—';$('totalWithdrawals').textContent='—';
-$('historyRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
+walletSay('Chargement du solde et de l’historique…');$('balance').textContent='—';$('totalDeposits').textContent='—';$('totalWithdrawals').textContent='—';$('historyRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
 try{
-/* À installer côté Supabase : RPC sécurisée get_my_wallet() qui renvoie
-   {balance_fcfa,total_deposits_fcfa,total_withdrawals_fcfa,is_admin}.
-   Elle doit utiliser auth.uid(), RLS et des écritures serveur non modifiables par le client. */
-const w=await rpc('get_my_wallet');
-const wallet=Array.isArray(w)?w[0]:w;
-if(!wallet)throw new Error('La fonction get_my_wallet() n’est pas configurée.');
-$('balance').textContent=money(wallet.balance_fcfa);
-$('totalDeposits').textContent=wallet.total_deposits_fcfa==null?'Non disponible':money(wallet.total_deposits_fcfa);
-$('totalWithdrawals').textContent=wallet.total_withdrawals_fcfa==null?'Non disponible':money(wallet.total_withdrawals_fcfa);
+const w=await rpc('get_my_wallet');const wallet=Array.isArray(w)?w[0]:w;if(!wallet)throw new Error('Compte indisponible.');
+$('balance').textContent=money(wallet.balance_fcfa);$('totalDeposits').textContent=wallet.total_deposits_fcfa==null?'Non disponible':money(wallet.total_deposits_fcfa);$('totalWithdrawals').textContent=wallet.total_withdrawals_fcfa==null?'Non disponible':money(wallet.total_withdrawals_fcfa);
 if(wallet.is_admin===true)$('adminPanel').classList.remove('hidden');else $('adminPanel').classList.add('hidden');
-walletSay('Solde chargé depuis le registre sécurisé.');
-const tx=await rpc('get_my_transactions');
-const rows=Array.isArray(tx)?tx:[];
+walletSay('Solde chargé.');const tx=await rpc('get_my_transactions');const rows=Array.isArray(tx)?tx:[];
 $('historyRows').innerHTML=rows.length?rows.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.type)+'</td><td>'+safeText(r.amount_display??(r.amount_fcfa!=null?money(r.amount_fcfa):r.amount_btc+' BTC'))+'</td><td>'+safeText(r.status)+'</td><td>'+safeText(r.reference||r.txid||'—')+'</td></tr>').join(''):'<tr><td colspan="5">Aucune opération pour le moment.</td></tr>';
-}catch(e){
-walletSay('Fonctions financières non activées : '+friendlyError(e)+' Aucun solde n’a été inventé.');
-$('historyRows').innerHTML='<tr><td colspan="5">Historique indisponible tant que get_my_transactions() n’est pas configurée.</td></tr>';
-}
+}catch(e){walletSay('Le suivi des opérations est momentanément indisponible. Aucun solde fictif n’est affiché.');$('historyRows').innerHTML='<tr><td colspan="5">Historique momentanément indisponible.</td></tr>'}
 }
 async function init(){
 $('year').textContent=new Date().getFullYear();$('btcAddress').textContent=BTC_ADDRESS;
-if(!window.supabase?.createClient){say('Le service de connexion ne s’est pas chargé. Vérifiez Internet puis rechargez la page.');$('submitAuth').disabled=true;$('toggleMode').disabled=true;$('forgotPassword').disabled=true;return}
-try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);const {data,error}=await client.auth.getSession();if(error)throw error;if(data.session?.user)showDashboard(data.session.user);client.auth.onAuthStateChange((_event,session)=>{if(session?.user)showDashboard(session.user);else showAuth()})}catch(e){say('Impossible de joindre Supabase. Vérifiez l’URL et la clé publishable.')}
+if(!window.supabase?.createClient){say('Connexion indisponible. Vérifiez Internet puis rechargez la page.');$('submitAuth').disabled=true;$('toggleMode').disabled=true;$('forgotPassword').disabled=true;return}
+try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);const {data,error}=await client.auth.getSession();if(error)throw error;if(data.session?.user)showDashboard(data.session.user);client.auth.onAuthStateChange((_event,session)=>{if(session?.user)showDashboard(session.user);else showAuth()})}catch(e){say('Impossible de joindre le service de connexion. Réessayez plus tard.')}
 }
 $('toggleMode').addEventListener('click',()=>{if(!busy)setMode(mode==='login'?'signup':'login')});
-$('authForm').addEventListener('submit',async ev=>{
-ev.preventDefault();if(busy||!client)return;const email=$('memberEmail').value.trim(),password=$('memberPassword').value;setBusy(true);
-try{
-if(mode==='signup'){const username=$('memberName').value.trim();if(!username){say('Saisissez votre nom ou pseudo.');return}
+$('authForm').addEventListener('submit',async ev=>{ev.preventDefault();if(busy||!client)return;const email=$('memberEmail').value.trim(),password=$('memberPassword').value;setBusy(true);
+try{if(mode==='signup'){const username=$('memberName').value.trim();if(!username){say('Saisissez votre nom ou pseudo.');return}
 const {data,error}=await client.auth.signUp({email,password,options:{data:{username},emailRedirectTo:'https://dropinvestment.netlify.app/'}});
 if(error)throw error;if(data.session?.user){say('Compte créé.');showDashboard(data.session.user)}else{say('Inscription envoyée. Confirmez votre adresse depuis l’e-mail reçu, puis connectez-vous.');setMode('login');$('memberEmail').value=email;$('memberPassword').value=''}
 }else{const {data,error}=await client.auth.signInWithPassword({email,password});if(error)throw error;if(data.user)showDashboard(data.user)}
 }catch(e){say(friendlyError(e))}finally{setBusy(false)}
 });
-$('forgotPassword').addEventListener('click',async()=>{
-if(busy||!client)return;const email=$('memberEmail').value.trim();if(!email){say('Saisissez votre adresse e-mail.');$('memberEmail').focus();return}
+$('forgotPassword').addEventListener('click',async()=>{if(busy||!client)return;const email=$('memberEmail').value.trim();if(!email){say('Saisissez votre adresse e-mail.');$('memberEmail').focus();return}
 setBusy(true);try{const {error}=await client.auth.resetPasswordForEmail(email,{redirectTo:'https://dropinvestment.netlify.app/'});if(error)throw error;say('Si un compte correspond à cette adresse, un e-mail de réinitialisation a été envoyé.')}catch(e){say(friendlyError(e))}finally{setBusy(false)}
 });
 $('logout').addEventListener('click',async()=>{if(!client)return;const {error}=await client.auth.signOut();if(error){walletSay(friendlyError(error));return}showAuth();setMode('login');$('memberPassword').value=''});
 $('copyAddress').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(BTC_ADDRESS);walletSay('Adresse Bitcoin copiée. Vérifiez-la dans votre portefeuille avant envoi.')}catch(e){walletSay('Copie automatique indisponible. Sélectionnez et copiez l’adresse affichée.')}});
-$('requestDeposit').addEventListener('click',async()=>{
-const amount=Number($('depositAmount').value),txid=$('depositTx').value.trim();
-if(!Number.isFinite(amount)||amount<=0){walletSay('Saisissez un montant BTC valide.');return}
-if(!confirm('Vérifiez l’adresse BTC affichée avant de soumettre la demande. Le dépôt restera en attente de vérification. Continuer ?'))return;
-$('requestDeposit').disabled=true;
-try{
-/* RPC à installer : create_deposit_request(p_amount_btc, p_txid).
-   La fonction doit créer une demande PENDING; ne jamais créditer depuis le navigateur. */
-await rpc('create_deposit_request',{p_amount_btc:amount,p_txid:txid||null});
-walletSay('Demande de dépôt enregistrée en attente de vérification.');$('depositAmount').value='';$('depositTx').value='';await loadWallet();
-}catch(e){walletSay('Demande non envoyée : '+friendlyError(e)+'. Aucun dépôt n’a été crédité.')}
-finally{$('requestDeposit').disabled=false}
+$('requestDeposit').addEventListener('click',async()=>{const amount=Number($('depositAmount').value),txid=$('depositTx').value.trim();if(!Number.isFinite(amount)||amount<=0){walletSay('Saisissez un montant BTC valide.');return}
+if(!confirm('Vérifiez l’adresse BTC affichée avant de soumettre la demande. Le dépôt restera en attente de vérification. Continuer ?'))return;$('requestDeposit').disabled=true;
+try{await rpc('create_deposit_request',{p_amount_btc:amount,p_txid:txid||null});walletSay('Demande de dépôt enregistrée en attente de vérification.');$('depositAmount').value='';$('depositTx').value='';await loadWallet()}
+catch(e){walletSay('Demande non envoyée. Aucun dépôt n’a été crédité.');}finally{$('requestDeposit').disabled=false}
 });
-$('requestWithdrawal').addEventListener('click',async()=>{
-const amount=Number($('withdrawAmount').value),address=$('withdrawAddress').value.trim(),note=$('withdrawNote').value.trim();
-if(!Number.isSafeInteger(amount)||amount<=0){walletSay('Saisissez un montant de retrait en FCFA valide.');return}
+$('requestWithdrawal').addEventListener('click',async()=>{const amount=Number($('withdrawAmount').value),address=$('withdrawAddress').value.trim(),note=$('withdrawNote').value.trim();if(!Number.isSafeInteger(amount)||amount<=0){walletSay('Saisissez un montant de retrait en FCFA valide.');return}
 if(!/^bc1[ac-hj-np-z02-9]{20,}$/i.test(address)){walletSay('L’adresse Bitcoin semble invalide. Vérifiez-la avant de continuer.');return}
-if(!confirm('Confirmez-vous le montant et l’adresse Bitcoin de destination ? La demande sera soumise à validation manuelle.'))return;
-$('requestWithdrawal').disabled=true;
-try{
-/* Paramètres confirmés dans Supabase : request_withdrawal(p_amount_fcfa, p_destination_btc, p_note).
-   La fonction doit vérifier le solde côté serveur et réserver le montant atomiquement. */
-await rpc('request_withdrawal',{p_amount_fcfa:amount,p_destination_btc:address,p_note:note||null});
-walletSay('Demande de retrait envoyée pour validation manuelle.');$('withdrawAmount').value='';$('withdrawAddress').value='';$('withdrawNote').value='';await loadWallet();
-}catch(e){walletSay('Demande de retrait non envoyée : '+friendlyError(e)+'. Aucun montant n’a été débité.')}
-finally{$('requestWithdrawal').disabled=false}
+if(!confirm('Confirmez-vous le montant et l’adresse Bitcoin ? La demande sera soumise à validation manuelle.'))return;$('requestWithdrawal').disabled=true;
+try{await rpc('request_withdrawal',{p_amount_fcfa:amount,p_destination_btc:address,p_note:note||null});walletSay('Demande de retrait envoyée pour validation manuelle.');$('withdrawAmount').value='';$('withdrawAddress').value='';$('withdrawNote').value='';await loadWallet()}
+catch(e){walletSay('Demande de retrait non envoyée. Aucun montant n’a été débité.');}finally{$('requestWithdrawal').disabled=false}
 });
-$('loadAdmin').addEventListener('click',async()=>{
-$('adminRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
-try{
-/* RPC à installer : admin_list_pending_withdrawals(). Elle doit vérifier un rôle
-   admin conservé côté serveur, jamais une valeur modifiable par l’utilisateur. */
-const rows=await rpc('admin_list_pending_withdrawals');
-const list=Array.isArray(rows)?rows:[];
-$('adminRows').innerHTML=list.length?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.destination_btc)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">Après approbation, marquez payé uniquement après envoi réel.</p></td></tr>').join(''):'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
-}catch(e){$('adminRows').innerHTML='<tr><td colspan="5">Administration non configurée ou accès refusé : '+safeText(friendlyError(e))+'</td></tr>'}
+$('loadAdmin').addEventListener('click',async()=>{$('adminRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
+try{const rows=await rpc('admin_list_pending_withdrawals');const list=Array.isArray(rows)?rows:[];
+$('adminRows').innerHTML=list.length?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.destination_btc)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">L’approbation ne confirme pas l’envoi.</p></td></tr>').join(''):'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
+}catch(e){$('adminRows').innerHTML='<tr><td colspan="5">Administration momentanément indisponible.</td></tr>'}
 });
-$('adminRows').addEventListener('click',async ev=>{
-const btn=ev.target.closest('button[data-action]');if(!btn)return;
-const id=btn.dataset.id,action=btn.dataset.action;
-if(!id||!confirm(action==='approve'?'Approuver cette demande ? Cela ne prouve pas que les BTC ont été envoyés.':'Refuser cette demande ?'))return;
-btn.disabled=true;
-try{
-/* RPC à installer : admin_review_withdrawal(p_withdrawal_id,p_decision).
-   Prévoir une étape séparée pour marquer PAYÉ après confirmation du TXID. */
-await rpc('admin_review_withdrawal',{p_withdrawal_id:id,p_decision:action==='approve'?'approved':'rejected'});
-walletSay('Décision administrative enregistrée. Rechargez la liste pour vérifier le statut.');await $('loadAdmin').click();await loadWallet();
-}catch(e){walletSay('Décision non enregistrée : '+friendlyError(e))}finally{btn.disabled=false}
+$('adminRows').addEventListener('click',async ev=>{const btn=ev.target.closest('button[data-action]');if(!btn)return;const id=btn.dataset.id,action=btn.dataset.action;if(!id||!confirm(action==='approve'?'Approuver cette demande ? Cela ne confirme pas l’envoi des BTC.':'Refuser cette demande ?'))return;btn.disabled=true;
+try{await rpc('admin_review_withdrawal',{p_withdrawal_id:id,p_decision:action==='approve'?'approved':'rejected'});walletSay('Décision administrative enregistrée.');await $('loadAdmin').click();await loadWallet()}
+catch(e){walletSay('Décision non enregistrée. Réessayez plus tard.')}finally{btn.disabled=false}
 });
 setMode('login');init();
 })();
