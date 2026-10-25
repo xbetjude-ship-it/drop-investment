@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#052c1b">
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#04180f;--panel:#09291b;--green:#32e875;--gold:#ffd83d;--text:#f5fff8;--muted:#b8d0c1;--line:#2a5d40;--red:#ff7777}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(ellipse at top,#0a4828 0,var(--bg) 62%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
@@ -44,6 +43,7 @@ a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
 footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);font-size:.86rem}
 @media(max-width:780px){.navlinks a:not(.btn){display:none}.hero,.auth-area,.payment-box{grid-template-columns:1fr}.plans,.feature-grid,.stats{grid-template-columns:1fr}.hero{padding:35px 0}.hero-card{margin-top:5px}}
 /* DROP INVESTMENT — design premium */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#07110f;--panel:#101d19;--green:#32d6a0;--gold:#d7b66d;--text:#f4f7f5;--muted:#a5b5ae;--line:#2a4037;--red:#ff7777;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
 body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
@@ -168,9 +168,9 @@ function say(t){$('authMessage').textContent=t}
 function walletSay(t){$('walletMessage').textContent=t}
 function setBusy(v){busy=v;$('submitAuth').disabled=v;$('toggleMode').disabled=v;$('forgotPassword').disabled=v;$('submitAuth').textContent=v?'Veuillez patienter…':(mode==='login'?'Se connecter':'Créer mon compte')}
 function setMode(next){mode=next;$('authTitle').textContent=mode==='login'?'Connexion membre':'Créer un compte membre';$('submitAuth').textContent=mode==='login'?'Se connecter':'Créer mon compte';$('toggleMode').textContent=mode==='login'?'Créer un compte':'J’ai déjà un compte';$('memberName').required=mode==='signup';$('nameHint').textContent=mode==='signup'?'(obligatoire)':'(facultatif pour la connexion)';$('memberPassword').autocomplete=mode==='login'?'current-password':'new-password';$('forgotPassword').classList.toggle('hidden',mode!=='login');say('')}
-function money(n){return new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(Number(n)||0)+' FCFA'}
-function showDashboard(user){currentUser=user;$('auth').classList.add('hidden');$('auth').hidden=true;$('dashboard').classList.remove('hidden');$('dashboard').hidden=false;$('welcome').textContent='Bienvenue, '+(user.user_metadata?.username||user.email||'membre');$('memberEmailDisplay').textContent=user.email||'';loadWallet()}
-function showAuth(){$('dashboard').classList.add('hidden');$('dashboard').hidden=true;$('auth').classList.remove('hidden');$('auth').hidden=false;$('adminPanel').classList.add('hidden');currentUser=null}
+function money(n){const value=Number(n);return Number.isFinite(value)?new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(value)+' FCFA':'Indisponible'}
+function showDashboard(user){currentUser=user;$('auth').classList.add('hidden');$('dashboard').classList.remove('hidden');$('welcome').textContent='Bienvenue, '+(user.user_metadata?.username||user.email||'membre');$('memberEmailDisplay').textContent=user.email||'';loadWallet()}
+function showAuth(){$('dashboard').classList.add('hidden');$('auth').classList.remove('hidden');$('adminPanel').classList.add('hidden');currentUser=null}
 function friendlyError(error){const m=String(error?.message||'');if(/Invalid login credentials/i.test(m))return'E-mail ou mot de passe incorrect.';if(/Email not confirmed/i.test(m))return'Confirmez votre adresse e-mail depuis le message reçu.';if(/User already registered/i.test(m))return'Un compte existe déjà avec cette adresse. Essayez de vous connecter.';if(/Password should be at least/i.test(m))return'Choisissez un mot de passe d’au moins 8 caractères.';return m||'Opération impossible. Vérifiez la connexion et la configuration Supabase.'}
 async function rpc(name,args={}){if(!client)throw new Error('Supabase n’est pas initialisé.');const {data,error}=await client.rpc(name,args);if(error)throw error;return data}
 function formatDate(v){if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':d.toLocaleString('fr-FR')}
@@ -188,8 +188,8 @@ const w=await rpc('get_my_wallet');
 const wallet=Array.isArray(w)?w[0]:w;
 if(!wallet)throw new Error('La fonction get_my_wallet() n’est pas configurée.');
 $('balance').textContent=money(wallet.balance_fcfa);
-$('totalDeposits').textContent=money(wallet.total_deposits_fcfa);
-$('totalWithdrawals').textContent=money(wallet.total_withdrawals_fcfa);
+$('totalDeposits').textContent=wallet.total_deposits_fcfa==null?'Non disponible':money(wallet.total_deposits_fcfa);
+$('totalWithdrawals').textContent=wallet.total_withdrawals_fcfa==null?'Non disponible':money(wallet.total_withdrawals_fcfa);
 if(wallet.is_admin===true)$('adminPanel').classList.remove('hidden');else $('adminPanel').classList.add('hidden');
 walletSay('Solde chargé depuis le registre sécurisé.');
 const tx=await rpc('get_my_transactions');
@@ -241,9 +241,9 @@ if(!/^bc1[ac-hj-np-z02-9]{20,}$/i.test(address)){walletSay('L’adresse Bitcoin 
 if(!confirm('Confirmez-vous le montant et l’adresse Bitcoin de destination ? La demande sera soumise à validation manuelle.'))return;
 $('requestWithdrawal').disabled=true;
 try{
-/* RPC à installer : request_withdrawal(p_amount_fcfa, p_btc_address, p_note).
+/* Paramètres confirmés dans Supabase : request_withdrawal(p_amount_fcfa, p_destination_btc, p_note).
    La fonction doit vérifier le solde côté serveur et réserver le montant atomiquement. */
-await rpc('request_withdrawal',{p_amount_fcfa:amount,p_btc_address:address,p_note:note||null});
+await rpc('request_withdrawal',{p_amount_fcfa:amount,p_destination_btc:address,p_note:note||null});
 walletSay('Demande de retrait envoyée pour validation manuelle.');$('withdrawAmount').value='';$('withdrawAddress').value='';$('withdrawNote').value='';await loadWallet();
 }catch(e){walletSay('Demande de retrait non envoyée : '+friendlyError(e)+'. Aucun montant n’a été débité.')}
 finally{$('requestWithdrawal').disabled=false}
@@ -255,7 +255,7 @@ try{
    admin conservé côté serveur, jamais une valeur modifiable par l’utilisateur. */
 const rows=await rpc('admin_list_pending_withdrawals');
 const list=Array.isArray(rows)?rows:[];
-$('adminRows').innerHTML=list.length?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.btc_address)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">Après approbation, marquez payé uniquement après envoi réel.</p></td></tr>').join(''):'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
+$('adminRows').innerHTML=list.length?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.destination_btc)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">Après approbation, marquez payé uniquement après envoi réel.</p></td></tr>').join(''):'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
 }catch(e){$('adminRows').innerHTML='<tr><td colspan="5">Administration non configurée ou accès refusé : '+safeText(friendlyError(e))+'</td></tr>'}
 });
 $('adminRows').addEventListener('click',async ev=>{
