@@ -7,82 +7,168 @@
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
 :root{--bg:#04180f;--panel:#09291b;--green:#32e875;--gold:#ffd83d;--text:#f5fff8;--muted:#b8d0c1;--line:#2a5d40;--red:#ff7777}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at top,#0a4828 0,var(--bg) 62%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
-a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#0a4828 0,var(--bg) 62%);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+.wrap{width:min(1100px,92%);margin:auto}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:19px 0;gap:15px}
-.logo{font-weight:950;font-size:1.22rem;letter-spacing:.04em;text-decoration:none}.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}
+.logo{font-weight:950;font-size:1.22rem;letter-spacing:.04em;text-decoration:none}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:18px;align-items:center}
+.navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}
 .btn{border:0;border-radius:11px;padding:12px 17px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:8px}
-.btn:disabled{opacity:.55;cursor:not-allowed}.gold{background:var(--gold);color:#14210f}.outline{background:transparent;color:var(--text);border:1px solid var(--line)}.green{background:var(--green);color:#062014}.red{background:#542323;color:#fff}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.gold{background:var(--gold);color:#14210f}
+.outline{background:transparent;color:var(--text);border:1px solid var(--line)}
+.green{background:var(--green);color:#062014}
+.red{background:#542323;color:#fff}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;padding:58px 0 50px}
 .kicker{font-size:.77rem;text-transform:uppercase;letter-spacing:.15em;color:var(--green);font-weight:900}
-.hero h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:.98;letter-spacing:-.05em;margin:14px 0}.hero h1 span{color:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:.98;letter-spacing:-.05em;margin:14px 0}
+.hero h1 span{color:var(--gold)}
 .hero p{font-size:1.08rem;color:var(--muted);max-width:590px}
 .hero-card{padding:25px;border-radius:24px;background:linear-gradient(145deg,#0d452a,#061c12);border:1px solid #32e87577;box-shadow:0 18px 55px #0005}
 .hero-card .big{font-size:2.6rem;font-weight:950;color:var(--gold)}
 .pill{display:inline-block;border:1px solid #ffd83d66;border-radius:999px;padding:5px 10px;color:#ffeb9c;font-size:.78rem}
 .notice{border:1px solid #ffd83d77;background:#332b0c88;color:#ffefb3;border-radius:14px;padding:15px 17px;margin:10px auto 25px;font-size:.91rem}
-.section{padding:42px 0}.section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px}.sub{color:var(--muted);max-width:750px;margin:0 0 25px}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(150deg,#0c3321,#061d13);border:1px solid var(--line);border-radius:18px;padding:23px}
-.card:nth-child(2){border-color:#1498e8}.card:nth-child(3){border-color:#be54e9}
-.label{font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.price{font-size:2rem;font-weight:950;color:var(--gold);margin:9px 0}
-.card p,.feature p{color:var(--muted);font-size:.94rem}.card .btn{width:100%;margin-top:8px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:20px;border:1px solid #ffffff1c;border-radius:15px;background:#ffffff08}.feature h3{margin:8px 0}.icon{font-size:1.5rem}
-.auth-area{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.form-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}.form-card h3{margin-top:0}
-.field{margin:13px 0}.field label{display:block;font-weight:700;margin-bottom:6px}
-.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #3b6a4d;background:#03170e;color:var(--text);font:inherit}
-.field textarea{min-height:85px;resize:vertical}.muted{color:var(--muted)}.small{font-size:.82rem;color:var(--muted)}
+.section{padding:42px 0}
+.section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px}
+.sub{color:var(--muted);max-width:750px;margin:0 0 25px}
+.plans,.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:linear-gradient(150deg,#0c3321,#061d13);border:1px solid var(--line);border-radius:18px;padding:23px}
+.card:nth-child(2){border-color:#1498e8}
+.card:nth-child(3){border-color:#be54e9}
+.label{font-size:.77rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}
+.price{font-size:2rem;font-weight:950;color:var(--gold);margin:9px 0}
+.card p,.feature p{color:var(--muted);font-size:.94rem}
+.card .btn{width:100%;margin-top:8px}
+.feature{padding:20px;border:1px solid #ffffff1c;border-radius:15px;background:#ffffff08;min-width:0}
+.feature h3{margin:8px 0}
+.icon{font-size:1.5rem}
+.auth-area{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
+.form-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}
+.form-card h3{margin-top:0}
+.field{margin:13px 0}
+.field label{display:block;font-weight:700;margin-bottom:6px}
+.field input,.field textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #3b6a4d;background:#03170e;color:var(--text);font:inherit}
+.field textarea{min-height:85px;resize:vertical}
+.muted,.small{color:var(--muted)}
+.small{font-size:.82rem}
 .status{padding:10px;border-radius:10px;background:#03170e;border:1px solid var(--line);overflow-wrap:anywhere}
-.hidden{display:none!important}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
-.stat{padding:20px;border:1px solid var(--line);border-radius:15px;background:#ffffff08}.stat .num{font-size:1.5rem;font-weight:900;color:var(--gold)}
-.payment-box{display:grid;grid-template-columns:1fr 1fr;gap:18px}.notice-blue{background:#092c42;border:1px solid #1498e866;padding:15px;border-radius:12px;color:#d5f0ff}
+.hidden{display:none!important}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.stat{padding:20px;border:1px solid var(--line);border-radius:15px;background:#ffffff08}
+.stat .num{font-size:1.5rem;font-weight:900;color:var(--gold);overflow-wrap:anywhere}
+.payment-box{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.notice-blue{background:#092c42;border:1px solid #1498e866;padding:15px;border-radius:12px;color:#d5f0ff}
 .addr{font-family:ui-monospace,monospace;overflow-wrap:anywhere;background:#03170e;border:1px solid var(--line);border-radius:10px;padding:12px}
-.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:10px;border-bottom:1px solid #ffffff1c;vertical-align:top}th{color:var(--gold)}
-.faq details{border-bottom:1px solid #ffffff22;padding:15px 0}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:left;padding:10px;border-bottom:1px solid #ffffff1c;vertical-align:top}
+th{color:var(--gold)}
 footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);font-size:.86rem}
-@media(max-width:780px){.navlinks a:not(.btn){display:none}.hero,.auth-area,.payment-box{grid-template-columns:1fr}.plans,.feature-grid,.stats{grid-template-columns:1fr}.hero{padding:35px 0}.hero-card{margin-top:5px}}
+.faq details{border-bottom:1px solid #ffffff22;padding:15px 0}
+.faq summary{cursor:pointer;font-weight:800}
+.faq p{color:var(--muted)}
+@media(max-width:780px){
+.navlinks a:not(.btn){display:none}
+.hero,.auth-area,.payment-box{grid-template-columns:1fr}
+.plans,.feature-grid,.stats{grid-template-columns:1fr}
+.hero{padding:35px 0}
+}
 </style>
 </head>
 <body>
 <header class="wrap nav">
-<a class="logo" href="#" style="text-decoration:none">DROP <span>INVESTMENT</span></a>
-<nav class="navlinks"><a href="#plans">Formules</a><a href="#fonctionnement">Fonctionnement</a><a href="#faq">FAQ</a><a class="btn outline" href="#espace">Espace membre</a></nav>
+<a class="logo" href="#">DROP <span>INVESTMENT</span></a>
+<nav class="navlinks">
+<a href="#plans">Formules</a>
+<a href="#fonctionnement">Fonctionnement</a>
+<a href="#faq">FAQ</a>
+<a class="btn outline" href="#espace">Espace membre</a>
+</nav>
 </header>
 
 <main id="public">
 <section class="wrap hero">
-<div><div class="kicker">Espace membre et suivi des opérations</div><h1>Bienvenue chez<br><span>DROP INVESTMENT</span></h1>
-<p>Connectez-vous pour consulter vos demandes de dépôt, votre solde comptabilisé et vos demandes de retrait.</p>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px"><a class="btn gold" href="#plans">Découvrir les formules</a><a class="btn outline" href="#espace">Accéder à mon espace</a></div></div>
-<div class="hero-card"><span class="pill">ESPACE MEMBRE</span><div class="big">DROP</div><h2>Suivi des opérations</h2><p>Les soldes ne sont mis à jour qu’après confirmation côté serveur. Les demandes de retrait sont validées manuellement par l’administrateur.</p><span class="pill">Bitcoin · BTC</span><span class="pill">Supabase Auth</span></div>
+<div>
+<div class="kicker">Espace membre et suivi des opérations</div>
+<h1>Bienvenue chez<br><span>DROP INVESTMENT</span></h1>
+<p>Connectez-vous pour consulter votre portefeuille, vos demandes de dépôt et vos demandes de retrait.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+<a class="btn gold" href="#plans">Découvrir les formules</a>
+<a class="btn outline" href="#espace">Accéder à mon espace</a>
+</div>
+</div>
+<div class="hero-card">
+<span class="pill">ESPACE MEMBRE</span>
+<div class="big">DROP</div>
+<h2>Suivi des opérations</h2>
+<p>Les soldes affichés proviennent de Supabase. Les demandes de retrait doivent être examinées avant tout paiement réel.</p>
+<span class="pill">Bitcoin · BTC</span>
+<span class="pill">Supabase Auth</span>
+</div>
 </section>
 
-<div class="wrap notice"><strong>Important :</strong> n’envoyez des BTC qu’après avoir vérifié l’adresse et le réseau. Une transaction Bitcoin confirmée est généralement irréversible. Aucun rendement n’est garanti. Cette interface nécessite les fonctions serveur et les règles de base de données indiquées dans le code pour gérer de vrais fonds.</div>
+<div class="wrap notice">
+<strong>Important :</strong> vérifiez l’adresse Bitcoin et le réseau avant tout envoi. Les transactions Bitcoin sont généralement irréversibles. Aucun rendement n’est garanti. Une demande affichée sur ce site ne constitue pas une preuve de paiement.
+</div>
 
 <section class="wrap section" id="plans">
-<h2>Formules</h2><p class="sub">Les montants affichés sont des montants de référence, pas une promesse de rendement.</p>
+<h2>Formules</h2>
+<p class="sub">Consultez les conditions, les frais et les risques avant tout paiement. Ces formules ne garantissent aucun rendement.</p>
 <div class="plans">
-<article class="card"><div class="label">Formule 01</div><h3>Essentiel</h3><div class="price">10 000 FCFA</div><p>Consultez les conditions, les frais et les risques avant tout paiement.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
+<article class="card"><div class="label">Formule 01</div><h3>Essentiel</h3><div class="price">10 000 FCFA</div><p>Consultez les conditions avant de vous engager.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
 <article class="card"><div class="label">Formule 02</div><h3>Plus</h3><div class="price">15 000 FCFA</div><p>Aucun gain automatique n’est crédité par cette page.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
-<article class="card"><div class="label">Formule 03</div><h3>Premium</h3><div class="price">20 000 FCFA</div><p>Les dépôts et retraits sont soumis aux contrôles côté serveur.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
-</div></section>
-
-<section class="wrap section" id="fonctionnement"><h2>Fonctionnement</h2><p class="sub">Les actions financières sont enregistrées dans la base de données et contrôlées côté serveur.</p>
-<div class="feature-grid"><div class="feature"><div class="icon">₿</div><h3>Dépôts Bitcoin</h3><p>Une demande de dépôt reste en attente jusqu’à la vérification de la transaction sur la blockchain.</p></div>
-<div class="feature"><div class="icon">↗</div><h3>Retraits manuels</h3><p>Chaque demande est examinée par l’administrateur avant l’envoi des fonds.</p></div>
-<div class="feature"><div class="icon">🔐</div><h3>Protection du compte</h3><p>Le navigateur ne décide jamais du solde : la base de données et les fonctions serveur doivent faire les contrôles.</p></div></div>
+<article class="card"><div class="label">Formule 03</div><h3>Premium</h3><div class="price">20 000 FCFA</div><p>Les opérations restent soumises aux contrôles serveur.</p><a class="btn outline" href="#espace">Ouvrir l’espace membre</a></article>
+</div>
 </section>
 
-<section class="wrap section" id="espace"><h2>Espace membre</h2><p class="sub">Inscription et connexion par e-mail. Utilisez un mot de passe unique.</p>
+<section class="wrap section" id="fonctionnement">
+<h2>Fonctionnement</h2>
+<p class="sub">Les demandes sont enregistrées dans la base de données. La page seule ne valide pas les mouvements d’argent.</p>
+<div class="feature-grid">
+<div class="feature"><div class="icon">₿</div><h3>Dépôts Bitcoin</h3><p>Une demande reste en attente jusqu’à vérification indépendante de la transaction.</p></div>
+<div class="feature"><div class="icon">↗</div><h3>Retraits manuels</h3><p>Les demandes sont examinées par un administrateur autorisé.</p></div>
+<div class="feature"><div class="icon">🔐</div><h3>Protection du compte</h3><p>Les soldes doivent être contrôlés côté serveur, jamais par le navigateur seul.</p></div>
+</div>
+</section>
+
+<section class="wrap section" id="espace">
+<h2>Espace membre</h2>
+<p class="sub">Inscription et connexion par e-mail. Utilisez un mot de passe unique.</p>
+
 <div id="auth" class="auth-area">
-<form class="form-card" id="authForm"><h3 id="authTitle">Connexion membre</h3>
-<div class="field"><label for="memberName">Nom ou pseudo <span id="nameHint" class="small">(facultatif pour la connexion)</span></label><input id="memberName" autocomplete="nickname" placeholder="Votre pseudo"></div>
-<div class="field"><label for="memberEmail">Adresse e-mail</label><input id="memberEmail" type="email" autocomplete="email" required placeholder="vous@exemple.com"></div>
-<div class="field"><label for="memberPassword">Mot de passe</label><input id="memberPassword" type="password" minlength="8" autocomplete="current-password" required placeholder="8 caractères minimum"></div>
-<button class="btn gold" id="submitAuth" type="submit" style="width:100%">Se connecter</button><button class="btn green" id="toggleMode" type="button" style="width:100%;margin-top:10px">Créer un compte</button><button class="btn outline" id="forgotPassword" type="button" style="width:100%;margin-top:10px">Mot de passe oublié</button>
-<p id="authMessage" class="small status" role="status" aria-live="polite">La confirmation par e-mail peut être demandée.</p></form>
-<div class="form-card"><h3>Avant de commencer</h3><ul class="muted"><li>Confirmez votre adresse e-mail si demandé.</li><li>Les dépôts attendent une confirmation de transaction.</li><li>Les retraits sont soumis à validation manuelle.</li><li>Ne partagez jamais votre mot de passe.</li></ul><div class="notice-blue">L’interface financière appelle des fonctions Supabase sécurisées. Si elles ne sont pas installées, les demandes sont bloquées et aucun solde fictif n’est affiché.</div></div>
+<form class="form-card" id="authForm">
+<h3 id="authTitle">Connexion membre</h3>
+<div class="field">
+<label for="memberName">Nom ou pseudo <span id="nameHint" class="small">(facultatif pour la connexion)</span></label>
+<input id="memberName" autocomplete="nickname" placeholder="Votre pseudo">
+</div>
+<div class="field">
+<label for="memberEmail">Adresse e-mail</label>
+<input id="memberEmail" type="email" autocomplete="email" required placeholder="vous@exemple.com">
+</div>
+<div class="field">
+<label for="memberPassword">Mot de passe</label>
+<input id="memberPassword" type="password" minlength="8" autocomplete="current-password" required placeholder="8 caractères minimum">
+</div>
+<button class="btn gold" id="submitAuth" type="submit" style="width:100%">Se connecter</button>
+<button class="btn green" id="toggleMode" type="button" style="width:100%;margin-top:10px">Créer un compte</button>
+<button class="btn outline" id="forgotPassword" type="button" style="width:100%;margin-top:10px">Mot de passe oublié</button>
+<p id="authMessage" class="small status" role="status" aria-live="polite">La confirmation par e-mail peut être demandée.</p>
+</form>
+
+<div class="form-card">
+<h3>Avant de commencer</h3>
+<ul class="muted">
+<li>Confirmez votre adresse e-mail si demandé.</li>
+<li>Les dépôts restent en attente jusqu’à vérification.</li>
+<li>Les retraits sont soumis à validation.</li>
+<li>Ne partagez jamais votre mot de passe.</li>
+</ul>
+<div class="notice-blue">Si une fonction serveur manque ou refuse une opération, le site affichera un message au lieu d’inventer un solde.</div>
+</div>
 </div><div id="dashboard" class="hidden">
 <div class="form-card">
 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
@@ -95,21 +181,9 @@ footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);fon
 </div>
 
 <div class="stats">
-<div class="stat">
-<div class="small">Solde disponible</div>
-<div class="num" id="balance">—</div>
-<div class="small">Selon le registre validé</div>
-</div>
-<div class="stat">
-<div class="small">Dépôts confirmés</div>
-<div class="num" id="totalDeposits">—</div>
-<div class="small">FCFA équivalent, si configuré</div>
-</div>
-<div class="stat">
-<div class="small">Retraits payés</div>
-<div class="num" id="totalWithdrawals">—</div>
-<div class="small">FCFA équivalent, si configuré</div>
-</div>
+<div class="stat"><div class="small">Solde disponible</div><div class="num" id="balance">—</div><div class="small">Registre du portefeuille</div></div>
+<div class="stat"><div class="small">Dépôts confirmés</div><div class="num" id="totalDeposits">Non disponible</div><div class="small">Somme validée côté serveur</div></div>
+<div class="stat"><div class="small">Retraits payés</div><div class="num" id="totalWithdrawals">Non disponible</div><div class="small">Paiements confirmés uniquement</div></div>
 </div>
 
 <p id="walletMessage" class="small status" role="status">Chargement du compte…</p>
@@ -117,25 +191,25 @@ footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);fon
 <div class="payment-box">
 <div class="feature">
 <h3>Demander un dépôt Bitcoin</h3>
-<p>Adresse de réception BTC (vérifie-la avant d’envoyer).</p>
+<p>Adresse de réception BTC. Vérifie-la soigneusement avant tout envoi.</p>
 <div class="addr" id="btcAddress">bc1q4caj4vwxz4ekj8832w9wd6n3ylhxmzagx74u8n</div>
 <button type="button" class="btn outline" id="copyAddress" style="width:100%;margin-top:10px">Copier l’adresse BTC</button>
-
 <div class="field">
 <label for="depositAmount">Montant envoyé (BTC)</label>
-<input id="depositAmount" type="number" min="0.00000001" step="0.00000001" placeholder="Ex. 0.001">
+<input id="depositAmount" type="number" min="0.00000001" max="10" step="0.00000001" placeholder="Ex. 0.001">
 </div>
 <div class="field">
-<label for="depositTx">Identifiant de transaction (TXID), si disponible</label>
-<input id="depositTx" maxlength="120" placeholder="TXID de la transaction">
+<label for="depositTx">TXID de la transaction (facultatif)</label>
+<input id="depositTx" maxlength="120" placeholder="Identifiant de transaction">
 </div>
-<p class="small">Le TXID fourni par l’utilisateur ne suffit pas à valider le dépôt. La confirmation doit être vérifiée côté serveur.</p>
+<p class="small">Soumettre une demande ne confirme pas le dépôt. Le TXID doit être vérifié indépendamment avant tout crédit.</p>
 <button type="button" class="btn green" id="requestDeposit" style="width:100%">Soumettre la demande de dépôt</button>
+<p id="depositMessage" class="small status" role="status"></p>
 </div>
 
 <div class="feature">
 <h3>Demander un retrait</h3>
-<p>Les demandes sont examinées manuellement. Ne demande pas plus que ton solde disponible.</p>
+<p>La demande est soumise à vérification et approbation. Aucun paiement automatique n’est effectué par cette page.</p>
 <div class="field">
 <label for="withdrawAmount">Montant à retirer (FCFA)</label>
 <input id="withdrawAmount" type="number" min="1" step="1" placeholder="Montant en FCFA">
@@ -149,27 +223,29 @@ footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);fon
 <textarea id="withdrawNote" maxlength="300" placeholder="Informations complémentaires"></textarea>
 </div>
 <button type="button" class="btn gold" id="requestWithdrawal" style="width:100%">Envoyer la demande de retrait</button>
+<p id="withdrawMessage" class="small status" role="status"></p>
 </div>
 </div>
 
 <div class="feature" style="margin-top:18px">
 <h3>Historique des opérations</h3>
-<p class="small">Les statuts affichés proviennent du serveur.</p>
+<p class="small">L’historique affiché dépend des données renvoyées par Supabase.</p>
 <div class="table-wrap">
 <table>
-<thead><tr><th>Date</th><th>Type</th><th>Montant</th><th>Statut</th><th>Référence</th></tr></thead>
-<tbody id="historyRows"><tr><td colspan="5">Chargement…</td></tr></tbody>
+<thead><tr><th>Date</th><th>Type</th><th>Montant</th><th>Référence</th></tr></thead>
+<tbody id="historyRows"><tr><td colspan="4">Chargement…</td></tr></tbody>
 </table>
 </div>
 </div>
 
 <div id="adminPanel" class="feature hidden" style="margin-top:18px">
 <h3>Administration des retraits</h3>
-<p>Réservé aux comptes explicitement autorisés côté serveur. L’approbation ne signifie pas que le paiement a été envoyé.</p>
+<p>Réservé aux comptes administrateurs. Approuver une demande ne signifie pas que les fonds ont été envoyés.</p>
 <button type="button" class="btn outline" id="loadAdmin">Charger les demandes en attente</button>
+<p id="adminMessage" class="small status" role="status"></p>
 <div class="table-wrap">
 <table>
-<thead><tr><th>Date</th><th>Membre</th><th>Montant</th><th>Adresse BTC</th><th>Action</th></tr></thead>
+<thead><tr><th>Date</th><th>Membre</th><th>Montant</th><th>Adresse BTC</th><th>Décision</th></tr></thead>
 <tbody id="adminRows"><tr><td colspan="5">Aucune demande chargée.</td></tr></tbody>
 </table>
 </div>
@@ -180,16 +256,16 @@ footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);fon
 <section class="wrap section faq" id="faq">
 <h2>Questions fréquentes</h2>
 <details>
-<summary>Le dépôt est-il crédité dès que j’envoie des BTC ?</summary>
-<p>Non. Le dépôt reste en attente jusqu’à vérification indépendante de la transaction et du nombre de confirmations requis.</p>
+<summary>Le dépôt est-il crédité immédiatement ?</summary>
+<p>Non. Il doit être vérifié indépendamment sur la blockchain et satisfaire aux règles de confirmation avant tout crédit.</p>
 </details>
 <details>
-<summary>Comment les retraits sont-ils traités ?</summary>
-<p>Les demandes sont examinées par l’administrateur. Une demande ne doit être marquée comme payée qu’après l’envoi et la vérification de la transaction.</p>
+<summary>Comment fonctionnent les retraits ?</summary>
+<p>Une demande peut être examinée par l’administrateur. Le statut approuvé ne prouve pas que le paiement a été envoyé.</p>
 </details>
 <details>
-<summary>Pourquoi certaines fonctions peuvent-elles être indisponibles ?</summary>
-<p>Les fonctions financières nécessitent les procédures RPC, les tables, les politiques RLS et les contrôles côté serveur. Sans ces éléments, le site refuse de créer des opérations financières.</p>
+<summary>Pourquoi certaines informations sont-elles indisponibles ?</summary>
+<p>Les données apparaissent uniquement si les fonctions serveur correspondantes existent et renvoient des informations validées.</p>
 </details>
 </section>
 </main>
@@ -200,304 +276,481 @@ footer{border-top:1px solid #ffffff1c;padding:24px 0 40px;color:var(--muted);fon
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>(() => {
-'use strict';
-const SUPABASE_URL='https://vbupvbuvyahprqfjndaa.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY='sb_publishable_npazKAHEgFhOWjr4jPwbbA_x7w_dDpv';
-const BTC_ADDRESS='bc1q4caj4vwxz4ekj8832w9wd6n3ylhxmzagx74u8n';
-const $=id=>document.getElementById(id);
-let mode='login',busy=false,client=null,currentUser=null;
+  'use strict';
 
-function say(t){$('authMessage').textContent=t}
-function walletSay(t){$('walletMessage').textContent=t}
-function setBusy(v){
-busy=v;
-$('submitAuth').disabled=v;
-$('toggleMode').disabled=v;
-$('forgotPassword').disabled=v;
-$('submitAuth').textContent=v?'Veuillez patienter…':(mode==='login'?'Se connecter':'Créer mon compte')
-}
-function setMode(next){
-mode=next;
-$('authTitle').textContent=mode==='login'?'Connexion membre':'Créer un compte membre';
-$('submitAuth').textContent=mode==='login'?'Se connecter':'Créer mon compte';
-$('toggleMode').textContent=mode==='login'?'Créer un compte':'J’ai déjà un compte';
-$('memberName').required=mode==='signup';
-$('nameHint').textContent=mode==='signup'?'(obligatoire)':'(facultatif pour la connexion)';
-$('memberPassword').autocomplete=mode==='login'?'current-password':'new-password';
-$('forgotPassword').classList.toggle('hidden',mode!=='login');
-say('')
-}
-function money(n){
-return new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(Number(n)||0)+' FCFA'
-}
-function showDashboard(user){
-currentUser=user;
-$('auth').classList.add('hidden');
-$('dashboard').classList.remove('hidden');
-$('welcome').textContent='Bienvenue, '+(user.user_metadata?.username||user.email||'membre');
-$('memberEmailDisplay').textContent=user.email||'';
-loadWallet()
-}
-function showAuth(){
-$('dashboard').classList.add('hidden');
-$('auth').classList.remove('hidden');
-$('adminPanel').classList.add('hidden');
-currentUser=null
-}
-function friendlyError(error){
-const m=String(error?.message||'');
-if(/Invalid login credentials/i.test(m))return'E-mail ou mot de passe incorrect.';
-if(/Email not confirmed/i.test(m))return'Confirmez votre adresse e-mail depuis le message reçu.';
-if(/User already registered/i.test(m))return'Un compte existe déjà avec cette adresse. Essayez de vous connecter.';
-if(/Password should be at least/i.test(m))return'Choisissez un mot de passe d’au moins 8 caractères.';
-return m||'Opération impossible. Vérifiez la connexion et la configuration Supabase.'
-}
-async function rpc(name,args={}){
-if(!client)throw new Error('Supabase n’est pas initialisé.');
-const {data,error}=await client.rpc(name,args);
-if(error)throw error;
-return data
-}
-function formatDate(v){
-if(!v)return'—';
-const d=new Date(v);
-return Number.isNaN(d.getTime())?'—':d.toLocaleString('fr-FR')
-}
-function safeText(v){
-return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
-}
+  const SUPABASE_URL = 'https://vbupvbuvyahprqfjndaa.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_npazKAHEgFhOWjr4jPwbbA_x7w_dDpv';
 
-async function loadWallet(){
-walletSay('Chargement du solde et de l’historique…');
-$('balance').textContent='—';
-$('totalDeposits').textContent='—';
-$('totalWithdrawals').textContent='—';
-$('historyRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
-try{
-/* RPC à installer côté Supabase : get_my_wallet()
-   Doit renvoyer balance_fcfa, total_deposits_fcfa,
-   total_withdrawals_fcfa et is_admin. */
-const w=await rpc('get_my_wallet');
-const wallet=Array.isArray(w)?w[0]:w;
-if(!wallet)throw new Error('La fonction get_my_wallet() n’est pas configurée.');
-$('balance').textContent=money(wallet.balance_fcfa);
-$('totalDeposits').textContent=money(wallet.total_deposits_fcfa);
-$('totalWithdrawals').textContent=money(wallet.total_withdrawals_fcfa);
-if(wallet.is_admin===true)$('adminPanel').classList.remove('hidden');
-else $('adminPanel').classList.add('hidden');
-walletSay('Solde chargé depuis le registre sécurisé.');
+  const $ = id => document.getElementById(id);
 
-const tx=await rpc('get_my_transactions');
-const rows=Array.isArray(tx)?tx:[];
-$('historyRows').innerHTML=rows.length
-?rows.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.type)+'</td><td>'+safeText(r.amount_display??(r.amount_fcfa!=null?money(r.amount_fcfa):r.amount_btc+' BTC'))+'</td><td>'+safeText(r.status)+'</td><td>'+safeText(r.reference||r.txid||'—')+'</td></tr>').join('')
-:'<tr><td colspan="5">Aucune opération pour le moment.</td></tr>';
-}catch(e){
-walletSay('Fonctions financières non activées : '+friendlyError(e)+' Aucun solde n’a été inventé.');
-$('historyRows').innerHTML='<tr><td colspan="5">Historique indisponible tant que get_my_transactions() n’est pas configurée.</td></tr>'
-}
-}
+  const authBox = $('auth');
+  const dashboard = $('dashboard');
+  const form = $('authForm');
+  const nameInput = $('memberName');
+  const emailInput = $('memberEmail');
+  const passwordInput = $('memberPassword');
+  const submitButton = $('submitAuth');
+  const toggleButton = $('toggleMode');
+  const forgotButton = $('forgotPassword');
+  const message = $('authMessage');
+  const nameHint = $('nameHint');
 
-async function init(){
-$('year').textContent=new Date().getFullYear();
-$('btcAddress').textContent=BTC_ADDRESS;
-if(!window.supabase?.createClient){
-say('Le service de connexion ne s’est pas chargé. Vérifiez Internet puis rechargez la page.');
-$('submitAuth').disabled=true;
-$('toggleMode').disabled=true;
-$('forgotPassword').disabled=true;
-return
-}
-try{
-client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
-const {data,error}=await client.auth.getSession();
-if(error)throw error;
-if(data.session?.user)showDashboard(data.session.user);
-client.auth.onAuthStateChange((_event,session)=>{
-if(session?.user)showDashboard(session.user);
-else showAuth()
-})
-}catch(e){
-say('Impossible de joindre Supabase. Vérifiez l’URL et la clé publishable.')
-}
-}
+  let mode = 'login';
+  let busy = false;
+  let client = null;
 
-$('toggleMode').addEventListener('click',()=>{
-if(!busy)setMode(mode==='login'?'signup':'login')
-});
+  function say(text) {
+    if (message) message.textContent = text;
+  }
 
-$('authForm').addEventListener('submit',async ev=>{
-ev.preventDefault();
-if(busy||!client)return;
-const email=$('memberEmail').value.trim();
-const password=$('memberPassword').value;
-setBusy(true);
-try{
-if(mode==='signup'){
-const username=$('memberName').value.trim();
-if(!username){say('Saisissez votre nom ou pseudo.');return}
-const {data,error}=await client.auth.signUp({
-email,password,
-options:{data:{username},emailRedirectTo:'https://dropinvestment.netlify.app/'}
-});
-if(error)throw error;
-if(data.session?.user){
-say('Compte créé.');
-showDashboard(data.session.user)
-}else{
-say('Inscription envoyée. Confirmez votre adresse depuis l’e-mail reçu, puis connectez-vous.');
-setMode('login');
-$('memberEmail').value=email;
-$('memberPassword').value=''
-}
-}else{
-const {data,error}=await client.auth.signInWithPassword({email,password});
-if(error)throw error;
-if(data.user)showDashboard(data.user)
-}
-}catch(e){
-say(friendlyError(e))
-}finally{
-setBusy(false)
-}
-});
+  function setBusy(value) {
+    busy = value;
+    if (submitButton) {
+      submitButton.disabled = value;
+      submitButton.textContent = value
+        ? 'Veuillez patienter…'
+        : mode === 'login' ? 'Se connecter' : 'Créer mon compte';
+    }
+    if (toggleButton) toggleButton.disabled = value;
+    if (forgotButton) forgotButton.disabled = value;
+  }
 
-$('forgotPassword').addEventListener('click',async()=>{
-if(busy||!client)return;
-const email=$('memberEmail').value.trim();
-if(!email){say('Saisissez votre adresse e-mail.');$('memberEmail').focus();return}
-setBusy(true);
-try{
-const {error}=await client.auth.resetPasswordForEmail(email,{
-redirectTo:'https://dropinvestment.netlify.app/'
-});
-if(error)throw error;
-say('Si un compte correspond à cette adresse, un e-mail de réinitialisation a été envoyé.')
-}catch(e){
-say(friendlyError(e))
-}finally{
-setBusy(false)
-}
-});
+  function friendlyError(error) {
+    const text = String(error?.message || error || '');
+    if (/invalid login credentials/i.test(text)) {
+      return 'E-mail ou mot de passe incorrect.';
+    }
+    if (/email not confirmed/i.test(text)) {
+      return 'Confirme ton adresse e-mail avant de te connecter.';
+    }
+    if (/user already registered/i.test(text)) {
+      return 'Cette adresse e-mail possède déjà un compte.';
+    }
+    if (/password should be at least/i.test(text)) {
+      return 'Choisis un mot de passe plus long.';
+    }
+    return 'Une erreur est survenue. Vérifie ta connexion et réessaie.';
+  }
 
-$('logout').addEventListener('click',async()=>{
-if(!client)return;
-const {error}=await client.auth.signOut();
-if(error){walletSay(friendlyError(error));return}
-showAuth();
-setMode('login');
-$('memberPassword').value=''
-});
+  function showAuth() {
+    if (authBox) authBox.hidden = false;
+    if (dashboard) dashboard.hidden = true;
+  }
 
-$('copyAddress').addEventListener('click',async()=>{
-try{
-await navigator.clipboard.writeText(BTC_ADDRESS);
-walletSay('Adresse Bitcoin copiée. Vérifiez-la dans votre portefeuille avant envoi.')
-}catch(e){
-walletSay('Copie automatique indisponible. Sélectionnez et copiez l’adresse affichée.')
-}
-});
+  function showDashboard() {
+    if (authBox) authBox.hidden = true;
+    if (dashboard) dashboard.hidden = false;
+  }
 
-$('requestDeposit').addEventListener('click',async()=>{
-const amount=Number($('depositAmount').value);
-const txid=$('depositTx').value.trim();
-if(!Number.isFinite(amount)||amount<=0){
-walletSay('Saisissez un montant BTC valide.');
-return
-}
-if(!confirm('Vérifiez l’adresse BTC affichée avant de soumettre la demande. Le dépôt restera en attente de vérification. Continuer ?'))return;
-$('requestDeposit').disabled=true;
-try{
-/* RPC à créer côté Supabase : create_deposit_request(p_amount_btc, p_txid).
-   Cette fonction doit seulement créer une demande en attente.
-   Elle ne doit jamais créditer le solde sur la seule déclaration du client. */
-await rpc('create_deposit_request',{p_amount_btc:amount,p_txid:txid||null});
-walletSay('Demande de dépôt enregistrée en attente de vérification.');
-$('depositAmount').value='';
-$('depositTx').value='';
-await loadWallet()
-}catch(e){
-walletSay('Demande non envoyée : '+friendlyError(e)+'. Aucun dépôt n’a été crédité.')
-}finally{
-$('requestDeposit').disabled=false
-}
-});
+  function setMode(nextMode) {
+    mode = nextMode;
+    const registering = mode === 'register';
 
-$('requestWithdrawal').addEventListener('click',async()=>{
-const amount=Number($('withdrawAmount').value);
-const address=$('withdrawAddress').value.trim();
-const note=$('withdrawNote').value.trim();
-if(!Number.isSafeInteger(amount)||amount<=0){
-walletSay('Saisissez un montant de retrait en FCFA valide.');
-return
-}
-if(!/^bc1[ac-hj-np-z02-9]{20,}$/i.test(address)){
-walletSay('L’adresse Bitcoin semble invalide. Vérifiez-la avant de continuer.');
-return
-}
-if(!confirm('Confirmez-vous le montant et l’adresse Bitcoin de destination ? La demande sera soumise à validation manuelle.'))return;
-$('requestWithdrawal').disabled=true;
-try{
-/* RPC à créer : request_withdrawal(p_amount_fcfa, p_btc_address, p_note).
-   Elle doit vérifier le solde côté serveur et réserver le montant atomiquement. */
-await rpc('request_withdrawal',{
-p_amount_fcfa:amount,
-p_btc_address:address,
-p_note:note||null
-});
-walletSay('Demande de retrait envoyée pour validation manuelle.');
-$('withdrawAmount').value='';
-$('withdrawAddress').value='';
-$('withdrawNote').value='';
-await loadWallet()
-}catch(e){
-walletSay('Demande de retrait non envoyée : '+friendlyError(e)+'. Aucun montant n’a été débité.')
-}finally{
-$('requestWithdrawal').disabled=false
-}
-});
+    if (nameInput) nameInput.hidden = !registering;
+    if (nameHint) nameHint.hidden = !registering;
 
-$('loadAdmin').addEventListener('click',async()=>{
-$('adminRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
-try{
-/* RPC à créer : admin_list_pending_withdrawals().
-   Le rôle admin doit être vérifié côté serveur. */
-const rows=await rpc('admin_list_pending_withdrawals');
-const list=Array.isArray(rows)?rows:[];
-$('adminRows').innerHTML=list.length
-?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.btc_address)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">Après approbation, marquez payé uniquement après envoi réel.</p></td></tr>').join('')
-:'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
-}catch(e){
-$('adminRows').innerHTML='<tr><td colspan="5">Administration non configurée ou accès refusé : '+safeText(friendlyError(e))+'</td></tr>'
-}
-});
+    if (submitButton) {
+      submitButton.textContent = registering ? 'Créer mon compte' : 'Se connecter';
+    }
 
-$('adminRows').addEventListener('click',async ev=>{
-const btn=ev.target.closest('button[data-action]');
-if(!btn)return;
-const id=btn.dataset.id;
-const action=btn.dataset.action;
-if(!id||!confirm(action==='approve'?'Approuver cette demande ? Cela ne prouve pas que les BTC ont été envoyés.':'Refuser cette demande ?'))return;
-btn.disabled=true;
-try{
-/* RPC à créer : admin_review_withdrawal(p_withdrawal_id,p_decision).
-   Prévoir une étape distincte pour marquer PAYÉ après l’envoi réel et vérifié. */
-await rpc('admin_review_withdrawal',{
-p_withdrawal_id:id,
-p_decision:action==='approve'?'approved':'rejected'
-});
-walletSay('Décision administrative enregistrée. Rechargez la liste pour vérifier le statut.');
-await $('loadAdmin').click();
-await loadWallet()
-}catch(e){
-walletSay('Décision non enregistrée : '+friendlyError(e))
-}finally{
-btn.disabled=false
-}
-});
+    if (toggleButton) {
+      toggleButton.textContent = registering
+        ? 'J’ai déjà un compte'
+        : 'Créer un compte';
+    }
 
-setMode('login');
-init();
+    say('');
+  }
+
+  async function loadWallet() {
+    if (!client) return;
+
+    const balanceElement = $('walletBalance');
+    const statusElement = $('walletStatus');
+
+    if (statusElement) statusElement.textContent = 'Chargement…';
+
+    const { data, error } = await client.rpc('get_my_wallet');
+
+    if (error) {
+      if (statusElement) {
+        statusElement.textContent =
+          'Solde indisponible : la fonction serveur doit être vérifiée.';
+      }
+      return;
+    }
+
+    const wallet = Array.isArray(data) ? data[0] : data;
+    const balance = Number(wallet?.balance_fcfa);
+
+    if (balanceElement) {
+      balanceElement.textContent = Number.isFinite(balance)
+        ? balance.toLocaleString('fr-FR') + ' FCFA'
+        : 'Indisponible';
+    }
+
+    if (statusElement) statusElement.textContent = 'Solde retourné par le serveur';
+  }
+
+  async function loadTransactions() {
+    if (!client) return;
+
+    const list = $('transactionList');
+    if (!list) return;
+
+    list.replaceChildren();
+
+    const { data, error } = await client.rpc('get_my_transactions');
+
+    if (error) {
+      list.textContent = 'Historique indisponible pour le moment.';
+      return;
+    }
+
+    if (!Array.isArray(data) || data.length === 0) {
+      list.textContent = 'Aucune opération à afficher.';
+      return;
+    }
+
+    data.forEach(transaction => {
+      const item = document.createElement('div');
+      item.className = 'transaction-item';
+
+      const title = document.createElement('strong');
+      title.textContent = String(transaction.transaction_type || 'Opération');
+
+      const detail = document.createElement('p');
+      const amount = Number(transaction.amount);
+      detail.textContent =
+        (Number.isFinite(amount) ? amount.toLocaleString('fr-FR') : '—') +
+        ' ' + String(transaction.currency || 'FCFA');
+
+      const date = document.createElement('small');
+      date.textContent = transaction.created_at
+        ? new Date(transaction.created_at).toLocaleString('fr-FR')
+        : '';
+
+      item.append(title, detail, date);
+      list.appendChild(item);
+    });
+  }
+
+  async function refreshDashboard() {
+    await Promise.all([
+      loadWallet(),
+      loadTransactions(),
+      checkAdmin()
+    ]);
+  }
+
+  async function checkAdmin() {
+    if (!client) return;
+
+    const adminPanel = $('adminPanel');
+    if (!adminPanel) return;
+
+    const { data, error } = await client.rpc('is_admin');
+
+    if (error) {
+      adminPanel.hidden = true;
+      return;
+    }
+
+    adminPanel.hidden = data !== true;
+    if (data === true) await loadPendingWithdrawals();
+  }
+
+  async function loadPendingWithdrawals() {
+    if (!client) return;
+
+    const list = $('pendingWithdrawals');
+    if (!list) return;
+
+    list.replaceChildren();
+
+    const { data, error } =
+      await client.rpc('admin_list_pending_withdrawals');
+
+    if (error) {
+      list.textContent = 'Impossible de charger les demandes.';
+      return;
+    }
+
+    if (!Array.isArray(data) || data.length === 0) {
+      list.textContent = 'Aucune demande en attente.';
+      return;
+    }
+
+    data.forEach(request => {
+      const item = document.createElement('div');
+      item.className = 'transaction-item';
+
+      const info = document.createElement('p');
+      info.textContent =
+        'Demande : ' + String(request.id) +
+        ' — ' + Number(request.amount_fcfa || 0).toLocaleString('fr-FR') +
+        ' FCFA — Adresse : ' + String(request.destination_btc || '');
+
+      const approve = document.createElement('button');
+      approve.type = 'button';
+      approve.textContent = 'Approuver la demande';
+      approve.addEventListener('click', () =>
+        reviewWithdrawal(request.id, 'approve')
+      );
+
+      const reject = document.createElement('button');
+      reject.type = 'button';
+      reject.textContent = 'Refuser la demande';
+      reject.addEventListener('click', () =>
+        reviewWithdrawal(request.id, 'reject')
+      );
+
+      item.append(info, approve, reject);
+      list.appendChild(item);
+    });
+  }
+
+  async function reviewWithdrawal(id, decision) {
+    if (!client) return;
+
+    const confirmation = decision === 'approve'
+      ? 'Confirmer l’approbation de cette demande ? Cela ne signifie pas que le paiement Bitcoin a été envoyé.'
+      : 'Confirmer le refus de cette demande ?';
+
+    if (!window.confirm(confirmation)) return;
+
+    const { error } = await client.rpc('admin_review_withdrawal', {
+      p_withdrawal_id: id,
+      p_decision: decision
+    });
+
+    if (error) {
+      window.alert(friendlyError(error));
+      return;
+    }
+
+    window.alert(
+      decision === 'approve'
+        ? 'Demande approuvée. Le paiement reste à effectuer séparément.'
+        : 'Demande refusée.'
+    );
+
+    await refreshDashboard();
+  }
+
+  async function signOut() {
+    if (!client) return;
+
+    const { error } = await client.auth.signOut();
+    if (error) {
+      window.alert(friendlyError(error));
+      return;
+    }
+
+    showAuth();
+    say('Tu es déconnecté.');
+  }
+
+  async function submitDeposit(event) {
+    event.preventDefault();
+    if (!client) return;
+
+    const amount = Number($('depositAmount')?.value);
+    const txid = String($('depositTxid')?.value || '').trim();
+
+    if (!Number.isFinite(amount) || amount <= 0 || !txid) {
+      window.alert('Indique le montant en BTC et la référence de transaction.');
+      return;
+    }
+
+    window.alert(
+      'Cette interface ne vérifie pas encore les transactions Bitcoin sur la blockchain. N’envoie pas de fonds en te basant uniquement sur cette déclaration.'
+    );
+
+    const { error } = await client.rpc('create_deposit_request', {
+      p_amount_btc: amount,
+      p_txid: txid
+    });
+
+    if (error) {
+      window.alert(friendlyError(error));
+      return;
+    }
+
+    window.alert(
+      'Demande enregistrée si la fonction serveur l’a acceptée. Aucun crédit ne doit être accordé sans vérification indépendante de la transaction.'
+    );
+
+    await refreshDashboard();
+  }
+
+  async function submitWithdrawal(event) {
+    event.preventDefault();
+    if (!client) return;
+
+    const amount = Number($('withdrawAmount')?.value);
+    const address = String($('withdrawAddress')?.value || '').trim();
+    const note = String($('withdrawNote')?.value || '').trim();
+
+    if (!Number.isFinite(amount) || amount <= 0 || !address) {
+      window.alert('Indique un montant valide et une adresse Bitcoin.');
+      return;
+    }
+
+    const { error } = await client.rpc('request_withdrawal', {
+      p_amount_fcfa: amount,
+      p_destination_btc: address,
+      p_note: note || null
+    });
+
+    if (error) {
+      window.alert(friendlyError(error));
+      return;
+    }
+
+    window.alert('Demande transmise au serveur, sous réserve de validation.');
+    await refreshDashboard();
+  }
+
+  async function handleAuth(event) {
+    event.preventDefault();
+    if (busy || !client) return;
+
+    const email = String(emailInput?.value || '').trim();
+    const password = String(passwordInput?.value || '');
+    const fullName = String(nameInput?.value || '').trim();
+
+    if (!email || !password) {
+      say('Renseigne ton e-mail et ton mot de passe.');
+      return;
+    }
+
+    setBusy(true);
+    say('');
+
+    try {
+      if (mode === 'register') {
+        if (!fullName) {
+          say('Indique ton nom.');
+          return;
+        }
+
+        const { data, error } = await client.auth.signUp({
+          email,
+          password,
+          options: {
+            data: { full_name: fullName }
+          }
+        });
+
+        if (error) throw error;
+
+        if (data.session) {
+          showDashboard();
+          await refreshDashboard();
+          say('Compte créé et connecté.');
+        } else {
+          say('Compte créé. Vérifie ta boîte e-mail pour confirmer ton adresse.');
+        }
+      } else {
+        const { error } = await client.auth.signInWithPassword({
+          email,
+          password
+        });
+
+        if (error) throw error;
+
+        showDashboard();
+        await refreshDashboard();
+        say('Connexion réussie.');
+      }
+    } catch (error) {
+      say(friendlyError(error));
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function resetPassword() {
+    if (!client) return;
+
+    const email = String(emailInput?.value || '').trim();
+    if (!email) {
+      say('Entre d’abord ton adresse e-mail.');
+      return;
+    }
+
+    const { error } = await client.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin
+    });
+
+    if (error) {
+      say(friendlyError(error));
+      return;
+    }
+
+    say('Si cette adresse est enregistrée, un e-mail de réinitialisation sera envoyé.');
+  }
+
+  async function init() {
+    if (!$('year')) return;
+    $('year').textContent = String(new Date().getFullYear());
+
+    if (!window.supabase) {
+      say('Le service de connexion n’a pas pu être chargé.');
+      return;
+    }
+
+    client = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_PUBLISHABLE_KEY
+    );
+
+    if (form) form.addEventListener('submit', handleAuth);
+    if (toggleButton) {
+      toggleButton.addEventListener('click', () =>
+        setMode(mode === 'login' ? 'register' : 'login')
+      );
+    }
+    if (forgotButton) {
+      forgotButton.addEventListener('click', resetPassword);
+    }
+
+    const depositForm = $('depositForm');
+    if (depositForm) depositForm.addEventListener('submit', submitDeposit);
+
+    const withdrawalForm = $('withdrawalForm');
+    if (withdrawalForm) {
+      withdrawalForm.addEventListener('submit', submitWithdrawal);
+    }
+
+    const logoutButton = $('logoutButton');
+    if (logoutButton) logoutButton.addEventListener('click', signOut);
+
+    const { data, error } = await client.auth.getSession();
+
+    if (error) {
+      say('Impossible de vérifier la session. Recharge la page.');
+      return;
+    }
+
+    if (data.session) {
+      showDashboard();
+      await refreshDashboard();
+    } else {
+      showAuth();
+    }
+
+    client.auth.onAuthStateChange((_event, session) => {
+      if (session) {
+        showDashboard();
+      } else {
+        showAuth();
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
 })();
 </script>
 </body>
