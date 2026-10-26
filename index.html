@@ -6,13 +6,12 @@
 <meta name="theme-color" content="#052c1b">
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--bg:#07110f;--panel:#101d19;--green:#32d6a0;--gold:#d7b66d;--text:#f4f7f5;--muted:#a5b5ae;--line:#2a4037;--red:#ff7777;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;letter-spacing:.008em;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.logo,.price,.stat .num{font-family:'Space Grotesk','Manrope',sans-serif;letter-spacing:-.04em}
-h1{font-weight:700;line-height:1.08}h2{font-weight:700;line-height:1.15}h3{font-weight:700;line-height:1.2}.sub{font-size:1rem;letter-spacing:.005em}.label{font-family:'DM Sans',sans-serif}.card{box-shadow:0 12px 30px #00000018}.card h3{letter-spacing:-.025em}
+body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.logo,.price,.stat .num{font-family:'Manrope','DM Sans',sans-serif;letter-spacing:-.035em}
 a{color:inherit}
 .wrap{width:min(1160px,91%);margin-inline:auto}
 .nav{position:relative;display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:20px;border-bottom:1px solid #ffffff12}
@@ -54,7 +53,7 @@ a{color:inherit}
 .card:nth-child(2),.card:nth-child(3){border-color:#ffffff18}
 .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:700}
 .card h3{font-size:1.35rem;margin:12px 0 6px}
-.plan-head{display:flex;align-items:center;gap:13px;margin-bottom:14px}.plan-emblem{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,#f5dfa0,#b8892d);color:#10251b;box-shadow:0 7px 20px #d7b66d22;border:1px solid #ffedb4}.plan-emblem svg{width:29px;height:29px;display:block}.plan-emblem.silver{background:linear-gradient(145deg,#f0f3f4,#87969b);border-color:#ffffff}.plan-emblem.gold{background:linear-gradient(145deg,#ffe7a0,#c18a22)}.plan-emblem.platinum{background:linear-gradient(145deg,#e8f3f4,#8eaeb3);border-color:#e7ffff}.plan-emblem.elite{background:linear-gradient(145deg,#c4f8e4,#279d77);border-color:#d1ffec}.plan-head .label{margin-bottom:4px}.plan-head h3{margin:0}.price{font-size:clamp(1.55rem,2.7vw,2rem);font-weight:700;color:var(--gold);margin:12px 0;letter-spacing:-.045em}.price small{font-family:'DM Sans',sans-serif;font-size:.44em;font-weight:600;letter-spacing:0;color:var(--muted)}
+.price{font-size:clamp(1.65rem,2.7vw,2.1rem);font-weight:800;color:var(--gold);margin:12px 0}
 .card p,.feature p{color:var(--muted);font-size:.92rem;line-height:1.75}
 .card .btn{width:100%;margin-top:13px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -116,11 +115,12 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <section class="wrap section" id="plans">
 <h2>Nos formules de dépôt</h2><p class="sub">Les taux ci-dessous sont annoncés pour une période de cinq jours. Ils ne constituent pas une garantie de gains. Informez-vous sur les conditions et les risques avant tout dépôt.</p>
 <div class="plans">
-<article class="card"><div class="plan-head"><span class="plan-emblem" aria-label="Logo Starter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 14.4 8.2 20 9l-4 4 .9 5.7L12 16l-4.9 2.7L8 13l-4-4 5.6-.8L12 3Z"/><path d="m9.5 11.8 1.6 1.6 3.5-3.6"/></svg></span><div><div class="label">Niveau 01 · Débutant</div><h3>DROP STARTER</h3></div></div><div class="price">10 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 10 000 FCFA</p><p><strong>Rendement annoncé :</strong> 5 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="plan-head"><span class="plan-emblem silver" aria-label="Logo Silver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><div><div class="label">Niveau 02 · Argent</div><h3>DROP SILVER</h3></div></div><div class="price">15 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 15 000 FCFA</p><p><strong>Rendement annoncé :</strong> 10 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="plan-head"><span class="plan-emblem gold" aria-label="Logo Gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9L12 3Z"/><path d="M8 11.5h8"/></svg></span><div><div class="label">Niveau 03 · Or</div><h3>DROP GOLD</h3></div></div><div class="price">20 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 20 000 FCFA</p><p><strong>Rendement annoncé :</strong> 15 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="plan-head"><span class="plan-emblem platinum" aria-label="Logo Platinum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 5-8 13L4 8l8-5Z"/><path d="m4 8 16 0M8 8l4 13 4-13M8 5.5l4 2.5 4-2.5"/></svg></span><div><div class="label">Niveau 04 · Premium</div><h3>DROP PLATINUM</h3></div></div><div class="price">25 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 25 000 FCFA</p><p><strong>Rendement annoncé :</strong> 20 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="plan-head"><span class="plan-emblem elite" aria-label="Logo Elite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 14.8 8l5.8.8-4.2 4.1 1 5.8-5.4-2.8-5.4 2.8 1-5.8-4.2-4.1 5.8-.8L12 2.8Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><div class="label">Niveau 05 · Exclusif</div><h3>DROP ELITE</h3></div></div><div class="price">30 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 30 000 FCFA</p><p><strong>Rendement annoncé :</strong> 25 % / 5 jours</p><a class="btn gold" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 01</div><h3>DROP STARTER</h3><div class="price">10 000 FCFA</div><p><strong>5 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 02</div><h3>DROP SILVER</h3><div class="price">15 000 FCFA</div><p><strong>10 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 03</div><h3>DROP GOLD</h3><div class="price">20 000 FCFA</div><p><strong>15 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 04</div><h3>DROP PLATINUM</h3><div class="price">25 000 FCFA</div><p><strong>20 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Niveau 05</div><h3>DROP ELITE</h3><div class="price">30 000 FCFA</div><p><strong>25 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="label">Montant personnalisé</div><h3>Votre choix</h3><div class="price">Dès 10 000 FCFA</div><p>Montant personnalisé à partir de 10 000 FCFA, selon les conditions applicables.</p><a class="btn gold" href="#espace">Commencer</a></article>
 </div></section>
 <section class="wrap section" id="fonctionnement"><h2>Fonctionnement</h2><p class="sub">Un parcours simple pour déposer, suivre vos opérations et demander un retrait.</p>
 <div class="feature-grid"><div class="feature"><div class="icon">₿</div><h3>Paiement Bitcoin</h3><p>Copiez l’adresse BTC affichée dans votre espace membre, vérifiez-la puis envoyez le montant choisi.</p></div>
@@ -169,77 +169,10 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <details><summary>Quand mon dépôt est-il pris en compte ?</summary><p>Après vérification indépendante de la transaction Bitcoin et du nombre de confirmations requis. Le TXID saisi dans le formulaire ne suffit pas à lui seul.</p></details>
 </section>
 </main>
-<footer><div class="wrap">© <span id="year"></span> DROP INVESTMENT</div></footer>
+<footer><div class="wrap">© <span id="year"></span> DROP INVESTMENT · Vérifiez les risques et les conditions avant toute transaction.</div></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (() => {
 'use strict';
 const SUPABASE_URL='https://vbupvbuvyahprqfjndaa.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY='sb_publishable_npazKAHEgFhOWjr4jPwbbA_x7w_dDpv';
-const BTC_ADDRESS='bc1q4caj4vwxz4ekj8832w9wd6n3ylhxmzagx74u8n';
-const $=id=>document.getElementById(id);
-let mode='login',busy=false,client=null,currentUser=null;
-function say(t){$('authMessage').textContent=t}
-function walletSay(t){$('walletMessage').textContent=t}
-function setBusy(v){busy=v;$('submitAuth').disabled=v;$('toggleMode').disabled=v;$('forgotPassword').disabled=v;$('submitAuth').textContent=v?'Veuillez patienter…':(mode==='login'?'Se connecter':'Créer mon compte')}
-function setMode(next){mode=next;$('authTitle').textContent=mode==='login'?'Connexion membre':'Créer un compte membre';$('submitAuth').textContent=mode==='login'?'Se connecter':'Créer mon compte';$('toggleMode').textContent=mode==='login'?'Créer un compte':'J’ai déjà un compte';$('memberName').required=mode==='signup';$('nameHint').textContent=mode==='signup'?'(obligatoire)':'(facultatif pour la connexion)';$('memberPassword').autocomplete=mode==='login'?'current-password':'new-password';$('forgotPassword').classList.toggle('hidden',mode!=='login');say('')}
-function money(n){const value=Number(n);return Number.isFinite(value)?new Intl.NumberFormat('fr-FR',{maximumFractionDigits:0}).format(value)+' FCFA':'Indisponible'}
-function showDashboard(user){currentUser=user;$('auth').classList.add('hidden');$('dashboard').classList.remove('hidden');$('welcome').textContent='Bienvenue, '+(user.user_metadata?.username||user.email||'membre');$('memberEmailDisplay').textContent=user.email||'';loadWallet()}
-function showAuth(){$('dashboard').classList.add('hidden');$('auth').classList.remove('hidden');$('adminPanel').classList.add('hidden');currentUser=null}
-function friendlyError(error){const m=String(error?.message||'');if(/Invalid login credentials/i.test(m))return'E-mail ou mot de passe incorrect.';if(/Email not confirmed/i.test(m))return'Confirmez votre adresse e-mail depuis le message reçu.';if(/User already registered/i.test(m))return'Un compte existe déjà avec cette adresse. Essayez de vous connecter.';if(/Password should be at least/i.test(m))return'Choisissez un mot de passe d’au moins 8 caractères.';if(/get_my_wallet|RPC|function .* does not exist|schema cache|permission denied|admin_list_pending/i.test(m))return'Cette opération est momentanément indisponible. Réessayez plus tard ou contactez l’administration.';return m||'Opération impossible. Vérifiez votre connexion et réessayez.'}
-async function rpc(name,args={}){if(!client)throw new Error('Service momentanément indisponible.');const {data,error}=await client.rpc(name,args);if(error)throw error;return data}
-function formatDate(v){if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':d.toLocaleString('fr-FR')}
-function safeText(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-async function loadWallet(){
-walletSay('Chargement du solde et de l’historique…');$('balance').textContent='—';$('totalDeposits').textContent='—';$('totalWithdrawals').textContent='—';$('historyRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
-try{
-const w=await rpc('get_my_wallet');const wallet=Array.isArray(w)?w[0]:w;if(!wallet)throw new Error('Compte indisponible.');
-$('balance').textContent=money(wallet.balance_fcfa);$('totalDeposits').textContent=wallet.total_deposits_fcfa==null?'Non disponible':money(wallet.total_deposits_fcfa);$('totalWithdrawals').textContent=wallet.total_withdrawals_fcfa==null?'Non disponible':money(wallet.total_withdrawals_fcfa);
-if(wallet.is_admin===true)$('adminPanel').classList.remove('hidden');else $('adminPanel').classList.add('hidden');
-walletSay('Solde chargé.');const tx=await rpc('get_my_transactions');const rows=Array.isArray(tx)?tx:[];
-$('historyRows').innerHTML=rows.length?rows.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.type)+'</td><td>'+safeText(r.amount_display??(r.amount_fcfa!=null?money(r.amount_fcfa):r.amount_btc+' BTC'))+'</td><td>'+safeText(r.status)+'</td><td>'+safeText(r.reference||r.txid||'—')+'</td></tr>').join(''):'<tr><td colspan="5">Aucune opération pour le moment.</td></tr>';
-}catch(e){walletSay('Le suivi des opérations est momentanément indisponible. Aucun solde fictif n’est affiché.');$('historyRows').innerHTML='<tr><td colspan="5">Historique momentanément indisponible.</td></tr>'}
-}
-async function init(){
-$('year').textContent=new Date().getFullYear();$('btcAddress').textContent=BTC_ADDRESS;
-if(!window.supabase?.createClient){say('Connexion indisponible. Vérifiez Internet puis rechargez la page.');$('submitAuth').disabled=true;$('toggleMode').disabled=true;$('forgotPassword').disabled=true;return}
-try{client=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);const {data,error}=await client.auth.getSession();if(error)throw error;if(data.session?.user)showDashboard(data.session.user);client.auth.onAuthStateChange((_event,session)=>{if(session?.user)showDashboard(session.user);else showAuth()})}catch(e){say('Impossible de joindre le service de connexion. Réessayez plus tard.')}
-}
-$('toggleMode').addEventListener('click',()=>{if(!busy)setMode(mode==='login'?'signup':'login')});
-$('authForm').addEventListener('submit',async ev=>{ev.preventDefault();if(busy||!client)return;const email=$('memberEmail').value.trim(),password=$('memberPassword').value;setBusy(true);
-try{if(mode==='signup'){const username=$('memberName').value.trim();if(!username){say('Saisissez votre nom ou pseudo.');return}
-const {data,error}=await client.auth.signUp({email,password,options:{data:{username},emailRedirectTo:'https://dropinvestment.netlify.app/'}});
-if(error)throw error;if(data.session?.user){say('Compte créé.');showDashboard(data.session.user)}else{say('Inscription envoyée. Confirmez votre adresse depuis l’e-mail reçu, puis connectez-vous.');setMode('login');$('memberEmail').value=email;$('memberPassword').value=''}
-}else{const {data,error}=await client.auth.signInWithPassword({email,password});if(error)throw error;if(data.user)showDashboard(data.user)}
-}catch(e){say(friendlyError(e))}finally{setBusy(false)}
-});
-$('forgotPassword').addEventListener('click',async()=>{if(busy||!client)return;const email=$('memberEmail').value.trim();if(!email){say('Saisissez votre adresse e-mail.');$('memberEmail').focus();return}
-setBusy(true);try{const {error}=await client.auth.resetPasswordForEmail(email,{redirectTo:'https://dropinvestment.netlify.app/'});if(error)throw error;say('Si un compte correspond à cette adresse, un e-mail de réinitialisation a été envoyé.')}catch(e){say(friendlyError(e))}finally{setBusy(false)}
-});
-$('logout').addEventListener('click',async()=>{if(!client)return;const {error}=await client.auth.signOut();if(error){walletSay(friendlyError(error));return}showAuth();setMode('login');$('memberPassword').value=''});
-$('copyAddress').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(BTC_ADDRESS);walletSay('Adresse Bitcoin copiée. Vérifiez-la dans votre portefeuille avant envoi.')}catch(e){walletSay('Copie automatique indisponible. Sélectionnez et copiez l’adresse affichée.')}});
-$('requestDeposit').addEventListener('click',async()=>{const amount=Number($('depositAmount').value),txid=$('depositTx').value.trim();if(!Number.isFinite(amount)||amount<=0){walletSay('Saisissez un montant BTC valide.');return}
-if(!confirm('Vérifiez l’adresse BTC affichée avant de soumettre la demande. Le dépôt restera en attente de vérification. Continuer ?'))return;$('requestDeposit').disabled=true;
-try{await rpc('create_deposit_request',{p_amount_btc:amount,p_txid:txid||null});walletSay('Demande de dépôt enregistrée en attente de vérification.');$('depositAmount').value='';$('depositTx').value='';await loadWallet()}
-catch(e){walletSay('Demande non envoyée. Aucun dépôt n’a été crédité.');}finally{$('requestDeposit').disabled=false}
-});
-$('requestWithdrawal').addEventListener('click',async()=>{const amount=Number($('withdrawAmount').value),address=$('withdrawAddress').value.trim(),note=$('withdrawNote').value.trim();if(!Number.isSafeInteger(amount)||amount<=0){walletSay('Saisissez un montant de retrait en FCFA valide.');return}
-if(!/^bc1[ac-hj-np-z02-9]{20,}$/i.test(address)){walletSay('L’adresse Bitcoin semble invalide. Vérifiez-la avant de continuer.');return}
-if(!confirm('Confirmez-vous le montant et l’adresse Bitcoin ? La demande sera soumise à validation manuelle.'))return;$('requestWithdrawal').disabled=true;
-try{await rpc('request_withdrawal',{p_amount_fcfa:amount,p_destination_btc:address,p_note:note||null});walletSay('Demande de retrait envoyée pour validation manuelle.');$('withdrawAmount').value='';$('withdrawAddress').value='';$('withdrawNote').value='';await loadWallet()}
-catch(e){walletSay('Demande de retrait non envoyée. Aucun montant n’a été débité.');}finally{$('requestWithdrawal').disabled=false}
-});
-$('loadAdmin').addEventListener('click',async()=>{$('adminRows').innerHTML='<tr><td colspan="5">Chargement…</td></tr>';
-try{const rows=await rpc('admin_list_pending_withdrawals');const list=Array.isArray(rows)?rows:[];
-$('adminRows').innerHTML=list.length?list.map(r=>'<tr><td>'+safeText(formatDate(r.created_at))+'</td><td>'+safeText(r.user_email||r.user_id)+'</td><td>'+safeText(money(r.amount_fcfa))+'</td><td>'+safeText(r.destination_btc)+'</td><td><button class="btn green" data-action="approve" data-id="'+safeText(r.id)+'">Approuver</button> <button class="btn red" data-action="reject" data-id="'+safeText(r.id)+'">Refuser</button><p class="small">L’approbation ne confirme pas l’envoi.</p></td></tr>').join(''):'<tr><td colspan="5">Aucune demande en attente.</td></tr>';
-}catch(e){$('adminRows').innerHTML='<tr><td colspan="5">Administration momentanément indisponible.</td></tr>'}
-});
-$('adminRows').addEventListener('click',async ev=>{const btn=ev.target.closest('button[data-action]');if(!btn)return;const id=btn.dataset.id,action=btn.dataset.action;if(!id||!confirm(action==='approve'?'Approuver cette demande ? Cela ne confirme pas l’envoi des BTC.':'Refuser cette demande ?'))return;btn.disabled=true;
-try{await rpc('admin_review_withdrawal',{p_withdrawal_id:id,p_decision:action==='approve'?'approved':'rejected'});walletSay('Décision administrative enregistrée.');await $('loadAdmin').click();await loadWallet()}
-catch(e){walletSay('Décision non enregistrée. Réessayez plus tard.')}finally{btn.disabled=false}
-});
-setMode('login');init();
-})();
-</script>
-</body>
-</html>
+const SUPABASE_PUBLISHAB
