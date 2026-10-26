@@ -6,12 +6,13 @@
 <meta name="theme-color" content="#052c1b">
 <title>DROP INVESTMENT — Espace membre</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 :root{--bg:#07110f;--panel:#101d19;--green:#32d6a0;--gold:#d7b66d;--text:#f4f7f5;--muted:#a5b5ae;--line:#2a4037;--red:#ff7777;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.logo,.price,.stat .num{font-family:'Manrope','DM Sans',sans-serif;letter-spacing:-.035em}
+body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b4939 0,transparent 48%),linear-gradient(180deg,#07110f 0%,#091512 60%,#07110f 100%);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7;letter-spacing:.008em;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.logo,.price,.stat .num{font-family:'Space Grotesk','Manrope',sans-serif;letter-spacing:-.04em}
+h1{font-weight:700;line-height:1.08}h2{font-weight:700;line-height:1.15}h3{font-weight:700;line-height:1.2}.sub{font-size:1rem;letter-spacing:.005em}.label{font-family:'DM Sans',sans-serif}.card{box-shadow:0 12px 30px #00000018}.card h3{letter-spacing:-.025em}
 a{color:inherit}
 .wrap{width:min(1160px,91%);margin-inline:auto}
 .nav{position:relative;display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:20px;border-bottom:1px solid #ffffff12}
@@ -53,7 +54,7 @@ a{color:inherit}
 .card:nth-child(2),.card:nth-child(3){border-color:#ffffff18}
 .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:700}
 .card h3{font-size:1.35rem;margin:12px 0 6px}
-.price{font-size:clamp(1.65rem,2.7vw,2.1rem);font-weight:800;color:var(--gold);margin:12px 0}
+.plan-head{display:flex;align-items:center;gap:13px;margin-bottom:14px}.plan-emblem{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(145deg,#f5dfa0,#b8892d);color:#10251b;box-shadow:0 7px 20px #d7b66d22;border:1px solid #ffedb4}.plan-emblem svg{width:29px;height:29px;display:block}.plan-emblem.silver{background:linear-gradient(145deg,#f0f3f4,#87969b);border-color:#ffffff}.plan-emblem.gold{background:linear-gradient(145deg,#ffe7a0,#c18a22)}.plan-emblem.platinum{background:linear-gradient(145deg,#e8f3f4,#8eaeb3);border-color:#e7ffff}.plan-emblem.elite{background:linear-gradient(145deg,#c4f8e4,#279d77);border-color:#d1ffec}.plan-head .label{margin-bottom:4px}.plan-head h3{margin:0}.price{font-size:clamp(1.55rem,2.7vw,2rem);font-weight:700;color:var(--gold);margin:12px 0;letter-spacing:-.045em}.price small{font-family:'DM Sans',sans-serif;font-size:.44em;font-weight:600;letter-spacing:0;color:var(--muted)}
 .card p,.feature p{color:var(--muted);font-size:.92rem;line-height:1.75}
 .card .btn{width:100%;margin-top:13px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -115,12 +116,11 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <section class="wrap section" id="plans">
 <h2>Nos formules de dépôt</h2><p class="sub">Les taux ci-dessous sont annoncés pour une période de cinq jours. Ils ne constituent pas une garantie de gains. Informez-vous sur les conditions et les risques avant tout dépôt.</p>
 <div class="plans">
-<article class="card"><div class="label">Niveau 01</div><h3>DROP STARTER</h3><div class="price">10 000 FCFA</div><p><strong>5 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="label">Niveau 02</div><h3>DROP SILVER</h3><div class="price">15 000 FCFA</div><p><strong>10 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="label">Niveau 03</div><h3>DROP GOLD</h3><div class="price">20 000 FCFA</div><p><strong>15 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="label">Niveau 04</div><h3>DROP PLATINUM</h3><div class="price">25 000 FCFA</div><p><strong>20 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="label">Niveau 05</div><h3>DROP ELITE</h3><div class="price">30 000 FCFA</div><p><strong>25 % annoncés tous les 5 jours</strong></p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
-<article class="card"><div class="label">Montant personnalisé</div><h3>Votre choix</h3><div class="price">Dès 10 000 FCFA</div><p>Montant personnalisé à partir de 10 000 FCFA, selon les conditions applicables.</p><a class="btn gold" href="#espace">Commencer</a></article>
+<article class="card"><div class="plan-head"><span class="plan-emblem" aria-label="Logo Starter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 14.4 8.2 20 9l-4 4 .9 5.7L12 16l-4.9 2.7L8 13l-4-4 5.6-.8L12 3Z"/><path d="m9.5 11.8 1.6 1.6 3.5-3.6"/></svg></span><div><div class="label">Niveau 01 · Débutant</div><h3>DROP STARTER</h3></div></div><div class="price">10 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 10 000 FCFA</p><p><strong>Rendement annoncé :</strong> 5 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="plan-head"><span class="plan-emblem silver" aria-label="Logo Silver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.5-3 7.5-7 10-4-2.5-7-5.5-7-10V6l7-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><div><div class="label">Niveau 02 · Argent</div><h3>DROP SILVER</h3></div></div><div class="price">15 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 15 000 FCFA</p><p><strong>Rendement annoncé :</strong> 10 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="plan-head"><span class="plan-emblem gold" aria-label="Logo Gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9L12 3Z"/><path d="M8 11.5h8"/></svg></span><div><div class="label">Niveau 03 · Or</div><h3>DROP GOLD</h3></div></div><div class="price">20 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 20 000 FCFA</p><p><strong>Rendement annoncé :</strong> 15 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="plan-head"><span class="plan-emblem platinum" aria-label="Logo Platinum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 5-8 13L4 8l8-5Z"/><path d="m4 8 16 0M8 8l4 13 4-13M8 5.5l4 2.5 4-2.5"/></svg></span><div><div class="label">Niveau 04 · Premium</div><h3>DROP PLATINUM</h3></div></div><div class="price">25 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 25 000 FCFA</p><p><strong>Rendement annoncé :</strong> 20 % / 5 jours</p><a class="btn outline" href="#espace">Accéder à l’espace membre</a></article>
+<article class="card"><div class="plan-head"><span class="plan-emblem elite" aria-label="Logo Elite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 14.8 8l5.8.8-4.2 4.1 1 5.8-5.4-2.8-5.4 2.8 1-5.8-4.2-4.1 5.8-.8L12 2.8Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><div class="label">Niveau 05 · Exclusif</div><h3>DROP ELITE</h3></div></div><div class="price">30 000 <small>FCFA</small></div><p><strong>Dépôt :</strong> 30 000 FCFA</p><p><strong>Rendement annoncé :</strong> 25 % / 5 jours</p><a class="btn gold" href="#espace">Accéder à l’espace membre</a></article>
 </div></section>
 <section class="wrap section" id="fonctionnement"><h2>Fonctionnement</h2><p class="sub">Un parcours simple pour déposer, suivre vos opérations et demander un retrait.</p>
 <div class="feature-grid"><div class="feature"><div class="icon">₿</div><h3>Paiement Bitcoin</h3><p>Copiez l’adresse BTC affichée dans votre espace membre, vérifiez-la puis envoyez le montant choisi.</p></div>
@@ -152,27 +152,4 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 <div class="field"><label for="depositAmount">Montant envoyé (BTC)</label><input id="depositAmount" type="number" min="0.00000001" step="0.00000001" placeholder="Ex. 0.001"></div>
 <div class="field"><label for="depositTx">Identifiant de transaction (TXID), si disponible</label><input id="depositTx" maxlength="120" placeholder="TXID de la transaction"></div>
 <p class="small">Le TXID fourni par l’utilisateur ne suffit pas à valider le dépôt. La confirmation doit être vérifiée côté serveur.</p>
-<button type="button" class="btn green" id="requestDeposit" style="width:100%">Soumettre la demande de dépôt</button></div>
-<div class="feature"><h3>Demander un retrait</h3><p>Votre demande est examinée par l’administration. Ne demandez pas plus que votre solde disponible. L’approbation ne prouve pas qu’un versement a été envoyé.</p>
-<div class="field"><label for="withdrawAmount">Montant à retirer (FCFA)</label><input id="withdrawAmount" type="number" min="1" step="1" placeholder="Montant en FCFA"></div>
-<div class="field"><label for="withdrawAddress">Adresse Bitcoin de destination</label><input id="withdrawAddress" maxlength="120" placeholder="Adresse BTC à vérifier"></div>
-<div class="field"><label for="withdrawNote">Note (facultatif)</label><textarea id="withdrawNote" maxlength="300" placeholder="Informations complémentaires"></textarea></div>
-<button type="button" class="btn gold" id="requestWithdrawal" style="width:100%">Envoyer la demande de retrait</button></div>
-</div>
-<div class="feature" style="margin-top:18px"><h3>Historique des opérations</h3><p class="small">Les statuts affichés proviennent du serveur.</p><div class="table-wrap"><table><thead><tr><th>Date</th><th>Type</th><th>Montant</th><th>Statut</th><th>Référence</th></tr></thead><tbody id="historyRows"><tr><td colspan="5">Chargement…</td></tr></tbody></table></div></div>
-<div id="adminPanel" class="feature hidden" style="margin-top:18px"><h3>Administration des retraits</h3><p>Réservé aux comptes explicitement autorisés côté serveur. L’approbation ne signifie pas que le paiement a été envoyé.</p><button type="button" class="btn outline" id="loadAdmin">Charger les demandes en attente</button><div class="table-wrap"><table><thead><tr><th>Date</th><th>Membre</th><th>Montant</th><th>Adresse BTC</th><th>Action</th></tr></thead><tbody id="adminRows"><tr><td colspan="5">Aucune demande chargée.</td></tr></tbody></table></div></div>
-</div>
-</section>
-<section class="wrap section faq" id="faq"><h2>Questions fréquentes</h2>
-<details><summary>Le dépôt est-il crédité dès que j’envoie des BTC ?</summary><p>Non. Le dépôt reste en attente jusqu’à vérification indépendante de la transaction et du nombre de confirmations requis.</p></details>
-<details><summary>Comment les retraits sont-ils traités ?</summary><p>Chaque retrait est examiné par l’administration. L’approbation seule ne signifie pas que les fonds ont été envoyés ; vérifiez le statut de paiement dans votre espace membre.</p></details>
-<details><summary>Quand mon dépôt est-il pris en compte ?</summary><p>Après vérification indépendante de la transaction Bitcoin et du nombre de confirmations requis. Le TXID saisi dans le formulaire ne suffit pas à lui seul.</p></details>
-</section>
-</main>
-<footer><div class="wrap">© <span id="year"></span> DROP INVESTMENT · Vérifiez les risques et les conditions avant toute transaction.</div></footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-(() => {
-'use strict';
-const SUPABASE_URL='https://vbupvbuvyahprqfjndaa.supabase.co';
-const SUPABASE_PUBLISHAB
+<button type="button" class="btn green" id="requestDeposit" style="width:100%">Soumettre la demande de dépôt</button><
